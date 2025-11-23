@@ -121,7 +121,7 @@ function PricingCards() {
           ))}
         </div>
         <div className="mt-12 text-center">
-           <p className="text-gray-600">Need an Enterprise plan with custom limits? <Link href="mailto:sales@elova.io" className="text-blue-600 hover:underline">Contact us</Link>.</p>
+           <p className="text-gray-400">Need an Enterprise plan with custom limits? <Link href="mailto:sales@elova.io" className="text-blue-400 hover:underline">Contact us</Link>.</p>
         </div>
       </Container>
     </div>
@@ -130,16 +130,16 @@ function PricingCards() {
 
 function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
   return (
-    <div className="-m-2 grid grid-cols-1 rounded-4xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
+    <div className="-m-2 grid grid-cols-1 rounded-4xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-white/10 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
       <div className="grid grid-cols-1 rounded-4xl p-2 shadow-md shadow-black/5">
-        <div className="rounded-3xl bg-white p-10 pb-9 shadow-2xl ring-1 ring-black/5">
+        <div className="rounded-3xl bg-gray-900 p-10 pb-9 shadow-2xl ring-1 ring-white/10">
           <Subheading>{tier.name}</Subheading>
-          <p className="mt-2 text-sm/6 text-gray-950/75">{tier.description}</p>
+          <p className="mt-2 text-sm/6 text-gray-400">{tier.description}</p>
           <div className="mt-8 flex items-center gap-4">
-            <div className="text-5xl font-medium text-gray-950">
+            <div className="text-5xl font-medium text-white">
               ${tier.priceMonthly}
             </div>
-            <div className="text-sm/5 text-gray-950/75">
+            <div className="text-sm/5 text-gray-400">
               <p>USD</p>
               <p>per month</p>
             </div>
@@ -150,7 +150,7 @@ function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
             </Button>
           </div>
           <div className="mt-8">
-            <h3 className="text-sm/6 font-medium text-gray-950">
+            <h3 className="text-sm/6 font-medium text-white">
               Includes:
             </h3>
             <ul className="mt-3 space-y-3">
@@ -269,7 +269,7 @@ function PricingTable({
                   colSpan={4}
                   className="px-0 pt-10 pb-0 group-first-of-type:pt-5"
                 >
-                  <div className="-mx-4 rounded-lg bg-gray-50 px-4 py-3 text-sm/6 font-semibold">
+                  <div className="-mx-4 rounded-lg bg-gray-800 px-4 py-3 text-sm/6 font-semibold text-white">
                     {section}
                   </div>
                 </th>
@@ -279,11 +279,11 @@ function PricingTable({
                 .map(({ name }) => (
                   <tr
                     key={name}
-                    className="border-b border-gray-100 last:border-none"
+                    className="border-b border-gray-800 last:border-none"
                   >
                     <th
                       scope="row"
-                      className="px-0 py-4 text-sm/6 font-normal text-gray-600"
+                      className="px-0 py-4 text-sm/6 font-normal text-gray-400"
                     >
                       {name}
                     </th>
@@ -316,7 +316,7 @@ function PricingTable({
                               </span>
                             </>
                           ) : (
-                            <div className="text-sm/6">{value}</div>
+                            <div className="text-sm/6 text-white">{value}</div>
                           )}
                         </td>
                       )
@@ -341,10 +341,10 @@ function FeatureItem({
   return (
     <li
       data-disabled={disabled ? true : undefined}
-      className="flex items-start gap-4 text-sm/6 text-gray-950/75 data-disabled:text-gray-950/25"
+      className="flex items-start gap-4 text-sm/6 text-gray-400 data-disabled:text-gray-500"
     >
       <span className="inline-flex h-6 items-center">
-        <PlusIcon className="size-3.75 shrink-0 fill-gray-950/25" />
+        <PlusIcon className="size-3.75 shrink-0 fill-gray-500" />
       </span>
       {disabled && <span className="sr-only">Not included:</span>}
       {description}
@@ -372,34 +372,34 @@ function FrequentlyAskedQuestions() {
         </Heading>
         <div className="mx-auto mt-16 mb-32 max-w-xl space-y-12">
           <dl>
-            <dt className="text-sm font-semibold">
+            <dt className="text-sm font-semibold text-white">
               How does the monitoring work?
             </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
+            <dd className="mt-4 text-sm/6 text-gray-400">
               Elova connects to your n8n instance via API. It fetches workflow execution data and presents it in a unified dashboard. We do not store your workflow data in the cloud; everything stays on your self-hosted instance.
             </dd>
           </dl>
           <dl>
-            <dt className="text-sm font-semibold">
+            <dt className="text-sm font-semibold text-white">
               Is the Community version really free?
             </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
+            <dd className="mt-4 text-sm/6 text-gray-400">
               Yes! The Community version is free forever for 1 n8n instance. It includes all core features like the flowchart debugger and endpoint monitoring.
             </dd>
           </dl>
           <dl>
-            <dt className="text-sm font-semibold">
+            <dt className="text-sm font-semibold text-white">
               Can I host it myself?
             </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
+            <dd className="mt-4 text-sm/6 text-gray-400">
               Absolutely. Elova is designed to be self-hosted using Docker. You can run it on the same server as your n8n instance or a separate one.
             </dd>
           </dl>
           <dl>
-            <dt className="text-sm font-semibold">
+            <dt className="text-sm font-semibold text-white">
               Do you support Zapier or Make.com?
             </dt>
-            <dd className="mt-4 text-sm/6 text-gray-600">
+            <dd className="mt-4 text-sm/6 text-gray-400">
               Currently, we focus on n8n monitoring. Support for Zapier and Make.com is planned for the Enterprise tier in the future.
             </dd>
           </dl>

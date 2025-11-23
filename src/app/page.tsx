@@ -24,16 +24,16 @@ function Hero() {
           <div className="mb-8 flex">
             <Link
               href="https://github.com/philipphaunstetter/n8n-analytics"
-              className="flex items-center gap-1 rounded-full bg-blue-600/10 px-3 py-0.5 text-sm/6 font-medium text-blue-600 data-hover:bg-blue-600/20"
+              className="flex items-center gap-1 rounded-xs bg-blue-500/10 px-3 py-0.5 text-sm/6 font-medium text-blue-400 data-hover:bg-blue-500/20"
             >
               Open Source on GitHub
               <ChevronRightIcon className="size-4" />
             </Link>
           </div>
-          <h1 className="font-display text-5xl font-semibold tracking-tight text-balance text-gray-950 sm:text-7xl md:text-8xl">
+          <h1 className="font-display text-5xl font-semibold tracking-tight text-balance text-white sm:text-7xl md:text-8xl">
             The Missing Observability Layer for n8n
           </h1>
-          <p className="mt-8 max-w-2xl text-lg font-medium text-gray-600 sm:text-xl/8">
+          <p className="mt-8 max-w-2xl text-lg font-medium text-gray-400 sm:text-xl/8">
             Self-hosted monitoring, visual debugging, and reliability checks for your critical automations. Built for IT Ops, Agencies, and AI Engineers.
           </p>
           <div className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row">
@@ -126,25 +126,25 @@ function UseCasesSection() {
 
       <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
         <div>
-          <div className="rounded-2xl bg-gray-50 p-8 ring-1 ring-black/5">
-            <h4 className="font-semibold text-gray-950">IT Operations</h4>
-            <p className="mt-2 text-sm text-gray-600">
+          <div className="rounded-2xl bg-gray-900 p-8 ring-1 ring-white/10">
+            <h4 className="font-semibold text-white">IT Operations</h4>
+            <p className="mt-2 text-sm text-gray-400">
               Ensure your cron jobs and infrastructure workflows never fail silently. Get unified visibility across all instances.
             </p>
           </div>
         </div>
         <div>
-          <div className="rounded-2xl bg-gray-50 p-8 ring-1 ring-black/5">
-            <h4 className="font-semibold text-gray-950">AI Engineers</h4>
-            <p className="mt-2 text-sm text-gray-600">
+          <div className="rounded-2xl bg-gray-900 p-8 ring-1 ring-white/10">
+            <h4 className="font-semibold text-white">AI Engineers</h4>
+            <p className="mt-2 text-sm text-gray-400">
               Track token usage and costs for your LLM chains. Debug complex AI agent interactions with visual traces.
             </p>
           </div>
         </div>
         <div>
-          <div className="rounded-2xl bg-gray-50 p-8 ring-1 ring-black/5">
-            <h4 className="font-semibold text-gray-950">Agencies</h4>
-            <p className="mt-2 text-sm text-gray-600">
+          <div className="rounded-2xl bg-gray-900 p-8 ring-1 ring-white/10">
+            <h4 className="font-semibold text-white">Agencies</h4>
+            <p className="mt-2 text-sm text-gray-400">
               Manage workflows for multiple clients in one dashboard. Offer white-labeled monitoring portals to your customers.
             </p>
           </div>
@@ -159,7 +159,7 @@ export default function Home() {
     <div className="overflow-hidden">
       <Hero />
       <main>
-        <div className="bg-linear-to-b from-white from-50% to-gray-100 py-32">
+        <div className="py-32">
           <ScreenshotSection />
           <FeaturesSection />
           <UseCasesSection />
