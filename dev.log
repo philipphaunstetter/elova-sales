@@ -1,0 +1,696 @@
+
+> radiant@0.1.0 dev
+> next dev
+
+ ⚠ Port 3000 is in use by process 9367, using available port 3001 instead.
+   ▲ Next.js 15.4.4
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.178.41:3001
+   - Environments: .env
+
+ ✓ Starting...
+ ✓ Ready in 1220ms
+ ○ Compiling / ...
+ ✓ Compiled / in 1742ms (2171 modules)
+ GET / 200 in 2429ms
+ ✓ Compiled /favicon.ico in 464ms (1352 modules)
+ GET /favicon.ico 200 in 528ms
+ ✓ Compiled in 364ms (2171 modules)
+ GET / 200 in 104ms
+ ✓ Compiled in 174ms (2171 modules)
+ GET / 200 in 53ms
+ GET / 200 in 162ms
+ ✓ Compiled /favicon.ico in 206ms (1352 modules)
+ GET /favicon.ico 200 in 259ms
+ ✓ Compiled in 299ms (2171 modules)
+ GET / 200 in 102ms
+ GET / 200 in 181ms
+ ⚠ Cross origin request detected from 192.168.178.41 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 77ms
+ ✓ Compiled in 429ms (2171 modules)
+ GET / 200 in 72ms
+ ✓ Compiled in 286ms (2171 modules)
+ GET / 200 in 45ms
+ ✓ Compiled in 276ms (2171 modules)
+ GET / 200 in 46ms
+ GET / 200 in 67ms
+ ✓ Compiled in 1503ms (2171 modules)
+ GET / 200 in 83ms
+ ✓ Compiled in 1019ms (2171 modules)
+ GET / 200 in 262ms
+ ✓ Compiled /favicon.ico in 140ms (1352 modules)
+ GET /favicon.ico 200 in 206ms
+ ✓ Compiled in 157ms (2188 modules)
+ GET / 200 in 65ms
+ GET / 200 in 153ms
+ GET /favicon.ico 200 in 15ms
+ ✓ Compiled in 440ms (2188 modules)
+ GET / 200 in 72ms
+ ✓ Compiled in 169ms (2171 modules)
+ GET / 200 in 95ms
+ ✓ Compiled in 68ms (836 modules)
+ GET / 200 in 15ms
+ ✓ Compiled in 85ms (836 modules)
+ GET / 200 in 17ms
+ ✓ Compiled in 76ms (836 modules)
+ GET / 200 in 19ms
+ ✓ Compiled in 214ms (2171 modules)
+ GET / 200 in 61ms
+ ✓ Compiled in 280ms (2171 modules)
+ GET / 200 in 52ms
+ ✓ Compiled in 264ms (2171 modules)
+ GET / 200 in 47ms
+ GET / 200 in 182ms
+ ✓ Compiled /favicon.ico in 213ms (1352 modules)
+ GET /favicon.ico 200 in 267ms
+ GET / 200 in 200ms
+ GET /favicon.ico 200 in 3ms
+ ✓ Compiled in 151ms (836 modules)
+ GET / 200 in 28ms
+ ✓ Compiled in 72ms (836 modules)
+ GET / 200 in 17ms
+ ✓ Compiled in 819ms (2486 modules)
+ ⨯ ReferenceError: BentoCard is not defined
+    at FeaturesSection (src/app/page.tsx:72:9)
+  70 |
+  71 |       <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-2">
+> 72 |         <BentoCard
+     |         ^
+  73 |           eyebrow="Peace of Mind"
+  74 |           title="Automatic History"
+  75 |           description="Forget about creating backup workflows to Google Drive. Elova keeps a full history of your executions and configurations out of the box." {
+  digest: '1987656377'
+}
+ GET / 200 in 99ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 274ms (2477 modules)
+ GET / 200 in 361ms
+ ✓ Compiled /favicon.ico in 52ms (1354 modules)
+ GET /favicon.ico 200 in 113ms
+ GET / 200 in 204ms
+ GET /favicon.ico 200 in 4ms
+ ✓ Compiled in 476ms (2491 modules)
+ GET / 200 in 100ms
+ ✓ Compiled in 173ms (2491 modules)
+ GET / 200 in 45ms
+ ✓ Compiled in 265ms (2491 modules)
+ GET / 200 in 52ms
+ ✓ Compiled in 72ms (1154 modules)
+ GET / 200 in 15ms
+ ✓ Compiled in 124ms (2491 modules)
+ GET / 200 in 73ms
+ ✓ Compiled in 130ms (2491 modules)
+ GET / 200 in 45ms
+ ✓ Compiled in 153ms (2491 modules)
+ GET / 200 in 58ms
+ ✓ Compiled in 82ms (1154 modules)
+ GET / 200 in 15ms
+ GET / 200 in 41ms
+ GET / 200 in 44ms
+ ✓ Compiled in 198ms (1154 modules)
+ GET / 200 in 18ms
+ ✓ Compiled in 489ms (1826 modules)
+ ⨯ ReferenceError: Container is not defined
+    at Hero (src/app/page.tsx:16:7)
+  14 |   return (
+  15 |     <div className="relative">
+> 16 |       <Container className="relative">
+     |       ^
+  17 |         <Navbar />
+  18 |         <div className="pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
+  19 |           <div className="mb-8 flex"> {
+  digest: '3256536927'
+}
+ ⨯ ReferenceError: Container is not defined
+    at ScreenshotSection (src/app/page.tsx:43:7)
+  41 |   return (
+  42 |     <div className="overflow-hidden">
+> 43 |       <Container className="pb-24">
+     |       ^
+  44 |         <Heading as="h2" className="max-w-3xl">
+  45 |           Stop flying blind with your automations.
+  46 |         </Heading> {
+  digest: '1787888063'
+}
+ ⨯ ReferenceError: Container is not defined
+    at FeaturesSection (src/app/page.tsx:60:5)
+  58 | function FeaturesSection() {
+  59 |   return (
+> 60 |     <Container id="features">
+     |     ^
+  61 |       <Subheading>Features</Subheading>
+  62 |       <Heading as="h3" className="mt-2 max-w-3xl">
+  63 |         Monitor, debug, and optimize with confidence. {
+  digest: '300297464'
+}
+ ⨯ ReferenceError: Container is not defined
+    at UseCasesSection (src/app/page.tsx:110:5)
+  108 | function UseCasesSection() {
+  109 |   return (
+> 110 |     <Container id="use-cases" className="pt-24 sm:pt-32">
+      |     ^
+  111 |       <Subheading>Use Cases</Subheading>
+  112 |       <Heading as="h3" className="mt-2 max-w-3xl">
+  113 |         Built for mission-critical automation teams. {
+  digest: '3866815865'
+}
+ GET / 200 in 78ms
+ ✓ Compiled in 162ms (2496 modules)
+ ⨯ ReferenceError: Container is not defined
+    at ScreenshotSection (src/app/page.tsx:17:7)
+  15 |   return (
+  16 |     <div className="overflow-hidden">
+> 17 |       <Container className="pb-24">
+     |       ^
+  18 |         <Heading as="h2" className="max-w-3xl">
+  19 |           Stop flying blind with your automations.
+  20 |         </Heading> {
+  digest: '829896488'
+}
+ ⨯ ReferenceError: Container is not defined
+    at FeaturesSection (src/app/page.tsx:34:5)
+  32 | function FeaturesSection() {
+  33 |   return (
+> 34 |     <Container id="features">
+     |     ^
+  35 |       <Subheading>Features</Subheading>
+  36 |       <Heading as="h3" className="mt-2 max-w-3xl">
+  37 |         Monitor, debug, and optimize with confidence. {
+  digest: '2852225326'
+}
+ ⨯ ReferenceError: Container is not defined
+    at UseCasesSection (src/app/page.tsx:84:5)
+  82 | function UseCasesSection() {
+  83 |   return (
+> 84 |     <Container id="use-cases" className="pt-24 sm:pt-32">
+     |     ^
+  85 |       <Subheading>Use Cases</Subheading>
+  86 |       <Heading as="h3" className="mt-2 max-w-3xl">
+  87 |         Built for mission-critical automation teams. {
+  digest: '200770655'
+}
+ GET / 500 in 179ms
+ ✓ Compiled /favicon.ico in 137ms (1356 modules)
+ GET /favicon.ico 200 in 202ms
+ ✓ Compiled in 131ms (2513 modules)
+ ⨯ ReferenceError: Container is not defined
+    at ScreenshotSection (src/app/page.tsx:17:7)
+  15 |   return (
+  16 |     <div className="overflow-hidden">
+> 17 |       <Container className="pb-24">
+     |       ^
+  18 |         <Heading as="h2" className="max-w-3xl">
+  19 |           Stop flying blind with your automations.
+  20 |         </Heading> {
+  digest: '829896488'
+}
+ ⨯ ReferenceError: Container is not defined
+    at FeaturesSection (src/app/page.tsx:34:5)
+  32 | function FeaturesSection() {
+  33 |   return (
+> 34 |     <Container id="features">
+     |     ^
+  35 |       <Subheading>Features</Subheading>
+  36 |       <Heading as="h3" className="mt-2 max-w-3xl">
+  37 |         Monitor, debug, and optimize with confidence. {
+  digest: '2852225326'
+}
+ ⨯ ReferenceError: Container is not defined
+    at UseCasesSection (src/app/page.tsx:84:5)
+  82 | function UseCasesSection() {
+  83 |   return (
+> 84 |     <Container id="use-cases" className="pt-24 sm:pt-32">
+     |     ^
+  85 |       <Subheading>Use Cases</Subheading>
+  86 |       <Heading as="h3" className="mt-2 max-w-3xl">
+  87 |         Built for mission-critical automation teams. {
+  digest: '200770655'
+}
+ GET / 500 in 161ms
+[ResponseAborted: ]
+ ⨯ ReferenceError: Container is not defined
+    at ScreenshotSection (src/app/page.tsx:17:7)
+  15 |   return (
+  16 |     <div className="overflow-hidden">
+> 17 |       <Container className="pb-24">
+     |       ^
+  18 |         <Heading as="h2" className="max-w-3xl">
+  19 |           Stop flying blind with your automations.
+  20 |         </Heading> {
+  digest: '829896488'
+}
+ ⨯ ReferenceError: Container is not defined
+    at FeaturesSection (src/app/page.tsx:34:5)
+  32 | function FeaturesSection() {
+  33 |   return (
+> 34 |     <Container id="features">
+     |     ^
+  35 |       <Subheading>Features</Subheading>
+  36 |       <Heading as="h3" className="mt-2 max-w-3xl">
+  37 |         Monitor, debug, and optimize with confidence. {
+  digest: '2852225326'
+}
+ ⨯ ReferenceError: Container is not defined
+    at UseCasesSection (src/app/page.tsx:84:5)
+  82 | function UseCasesSection() {
+  83 |   return (
+> 84 |     <Container id="use-cases" className="pt-24 sm:pt-32">
+     |     ^
+  85 |       <Subheading>Use Cases</Subheading>
+  86 |       <Heading as="h3" className="mt-2 max-w-3xl">
+  87 |         Built for mission-critical automation teams. {
+  digest: '200770655'
+}
+ GET / 500 in 50ms
+ GET /favicon.ico 200 in 12ms
+ ✓ Compiled in 140ms (2513 modules)
+ ⨯ ReferenceError: Container is not defined
+    at ScreenshotSection (src/app/page.tsx:17:7)
+  15 |   return (
+  16 |     <div className="overflow-hidden">
+> 17 |       <Container className="pb-24">
+     |       ^
+  18 |         <Heading as="h2" className="max-w-3xl">
+  19 |           Stop flying blind with your automations.
+  20 |         </Heading> {
+  digest: '829896488'
+}
+ ⨯ ReferenceError: Container is not defined
+    at FeaturesSection (src/app/page.tsx:34:5)
+  32 | function FeaturesSection() {
+  33 |   return (
+> 34 |     <Container id="features">
+     |     ^
+  35 |       <Subheading>Features</Subheading>
+  36 |       <Heading as="h3" className="mt-2 max-w-3xl">
+  37 |         Monitor, debug, and optimize with confidence. {
+  digest: '2852225326'
+}
+ ⨯ ReferenceError: Container is not defined
+    at UseCasesSection (src/app/page.tsx:84:5)
+  82 | function UseCasesSection() {
+  83 |   return (
+> 84 |     <Container id="use-cases" className="pt-24 sm:pt-32">
+     |     ^
+  85 |       <Subheading>Use Cases</Subheading>
+  86 |       <Heading as="h3" className="mt-2 max-w-3xl">
+  87 |         Built for mission-critical automation teams. {
+  digest: '200770655'
+}
+ GET / 500 in 139ms
+[ResponseAborted: ]
+ ⨯ ReferenceError: Container is not defined
+    at ScreenshotSection (src/app/page.tsx:17:7)
+  15 |   return (
+  16 |     <div className="overflow-hidden">
+> 17 |       <Container className="pb-24">
+     |       ^
+  18 |         <Heading as="h2" className="max-w-3xl">
+  19 |           Stop flying blind with your automations.
+  20 |         </Heading> {
+  digest: '829896488'
+}
+ ⨯ ReferenceError: Container is not defined
+    at FeaturesSection (src/app/page.tsx:34:5)
+  32 | function FeaturesSection() {
+  33 |   return (
+> 34 |     <Container id="features">
+     |     ^
+  35 |       <Subheading>Features</Subheading>
+  36 |       <Heading as="h3" className="mt-2 max-w-3xl">
+  37 |         Monitor, debug, and optimize with confidence. {
+  digest: '2852225326'
+}
+ ⨯ ReferenceError: Container is not defined
+    at UseCasesSection (src/app/page.tsx:84:5)
+  82 | function UseCasesSection() {
+  83 |   return (
+> 84 |     <Container id="use-cases" className="pt-24 sm:pt-32">
+     |     ^
+  85 |       <Subheading>Use Cases</Subheading>
+  86 |       <Heading as="h3" className="mt-2 max-w-3xl">
+  87 |         Built for mission-critical automation teams. {
+  digest: '200770655'
+}
+ GET / 500 in 37ms
+ GET /favicon.ico 200 in 6ms
+ ⨯ ReferenceError: Container is not defined
+    at ScreenshotSection (src/app/page.tsx:17:7)
+  15 |   return (
+  16 |     <div className="overflow-hidden">
+> 17 |       <Container className="pb-24">
+     |       ^
+  18 |         <Heading as="h2" className="max-w-3xl">
+  19 |           Stop flying blind with your automations.
+  20 |         </Heading> {
+  digest: '829896488'
+}
+ ⨯ ReferenceError: Container is not defined
+    at FeaturesSection (src/app/page.tsx:34:5)
+  32 | function FeaturesSection() {
+  33 |   return (
+> 34 |     <Container id="features">
+     |     ^
+  35 |       <Subheading>Features</Subheading>
+  36 |       <Heading as="h3" className="mt-2 max-w-3xl">
+  37 |         Monitor, debug, and optimize with confidence. {
+  digest: '2852225326'
+}
+ ⨯ ReferenceError: Container is not defined
+    at UseCasesSection (src/app/page.tsx:84:5)
+  82 | function UseCasesSection() {
+  83 |   return (
+> 84 |     <Container id="use-cases" className="pt-24 sm:pt-32">
+     |     ^
+  85 |       <Subheading>Use Cases</Subheading>
+  86 |       <Heading as="h3" className="mt-2 max-w-3xl">
+  87 |         Built for mission-critical automation teams. {
+  digest: '200770655'
+}
+ GET / 500 in 82ms
+ GET /favicon.ico 200 in 3ms
+ ⨯ ./src/app/page.tsx
+Error:   [31mx[0m Expression expected
+    ,-[[36;1;4m/Users/philipp/development/elova-sales/src/app/page.tsx[0m:11:1]
+ [2m 8[0m | import type { Metadata } from 'next'
+ [2m 9[0m |   description:
+ [2m10[0m |     'Self-hosted workflow observability for n8n. Monitor executions, debug with visual flowcharts, and track your automation health.',
+ [2m11[0m | }
+    : [35;1m^[0m
+ [2m12[0m | 
+ [2m13[0m | 
+ [2m14[0m | function ScreenshotSection() {
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ ./src/app/page.tsx
+Error:   [31mx[0m Expression expected
+    ,-[[36;1;4m/Users/philipp/development/elova-sales/src/app/page.tsx[0m:11:1]
+ [2m 8[0m | import type { Metadata } from 'next'
+ [2m 9[0m |   description:
+ [2m10[0m |     'Self-hosted workflow observability for n8n. Monitor executions, debug with visual flowcharts, and track your automation health.',
+ [2m11[0m | }
+    : [35;1m^[0m
+ [2m12[0m | 
+ [2m13[0m | 
+ [2m14[0m | function ScreenshotSection() {
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ ⨯ ./src/app/page.tsx
+Error:   [31mx[0m Expression expected
+    ,-[[36;1;4m/Users/philipp/development/elova-sales/src/app/page.tsx[0m:11:1]
+ [2m 8[0m | import type { Metadata } from 'next'
+ [2m 9[0m |   description:
+ [2m10[0m |     'Self-hosted workflow observability for n8n. Monitor executions, debug with visual flowcharts, and track your automation health.',
+ [2m11[0m | }
+    : [35;1m^[0m
+ [2m12[0m | 
+ [2m13[0m | 
+ [2m14[0m | function ScreenshotSection() {
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ GET / 500 in 640ms
+ GET / 500 in 240ms
+ ○ Compiling /_error ...
+ GET /favicon.ico 500 in 2ms
+ ✓ Compiled /_not-found in 408ms (2831 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET / 200 in 324ms
+ GET /favicon.ico 200 in 13ms
+ GET / 200 in 73ms
+ GET /favicon.ico 200 in 6ms
+ ✓ Compiled in 613ms (2828 modules)
+ GET / 200 in 93ms
+ GET / 200 in 204ms
+ GET /favicon.ico 200 in 17ms
+ ⨯ ./src/app/page.tsx
+Error:   [31mx[0m Expected '</', got 'jsx text (
+  [31m|[0m     )'
+     ,-[[36;1;4m/Users/philipp/development/elova-sales/src/app/page.tsx[0m:101:1]
+ [2m 98[0m |               graphic={<Map />}
+ [2m 99[0m |               className="lg:rounded-br-4xl"
+ [2m100[0m |             />
+ [2m101[0m | [35;1m,[0m[35;1m-[0m[35;1m>[0m       </div>
+ [2m102[0m | [35;1m`[0m[35;1m-[0m[35;1m>[0m     </Container>
+ [2m103[0m |       )
+ [2m104[0m |     }
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/page.tsx
+ GET / 500 in 15ms
+ GET / 500 in 12ms
+ ○ Compiling /_not-found ...
+ ⨯ ./node_modules/framer-motion/dist/es/index.mjs
+Error: It's currently unsupported to use "export *" in a client boundary. Please use named exports instead.
+Import trace for requested module:
+./node_modules/framer-motion/dist/es/index.mjs
+./src/app/page.tsx
+ ⨯ ./node_modules/framer-motion/dist/es/index.mjs
+Error: It's currently unsupported to use "export *" in a client boundary. Please use named exports instead.
+Import trace for requested module:
+./node_modules/framer-motion/dist/es/index.mjs
+./src/app/page.tsx
+ GET / 500 in 197ms
+ GET /_next/static/webpack/d23622ab32d47a3a.webpack.hot-update.json 500 in 733ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /favicon.ico 500 in 4ms
+ GET / 500 in 11ms
+ GET /favicon.ico 500 in 1ms
+ ✓ Compiled /_not-found in 189ms (1309 modules)
+ GET / 500 in 4ms
+ GET /favicon.ico 500 in 2ms
+ GET / 500 in 15ms
+ GET /favicon.ico 500 in 2ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 732ms (2800 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /_next/static/webpack/d23622ab32d47a3a.webpack.hot-update.json 404 in 981ms
+ GET / 200 in 50ms
+ GET /favicon.ico 200 in 16ms
+ ✓ Compiled in 180ms (2814 modules)
+ GET / 200 in 56ms
+ ✓ Compiled in 221ms (2792 modules)
+ GET / 200 in 86ms
+ ✓ Compiled in 124ms (2792 modules)
+ GET / 200 in 49ms
+ ✓ Compiled in 148ms (2792 modules)
+ GET / 200 in 39ms
+ ✓ Compiled in 337ms (2792 modules)
+ GET / 200 in 79ms
+ ✓ Compiled in 358ms (2792 modules)
+ GET / 200 in 60ms
+ GET / 200 in 189ms
+ ○ Compiling /pricing ...
+ ✓ Compiled /pricing in 821ms (3137 modules)
+ GET /pricing 200 in 1005ms
+ ✓ Compiled in 423ms (3151 modules)
+ GET / 200 in 104ms
+ GET /pricing 200 in 125ms
+ ✓ Compiled in 339ms (3151 modules)
+ GET / 200 in 106ms
+ GET /pricing 200 in 115ms
+ GET / 200 in 186ms
+ ✓ Compiled /favicon.ico in 409ms (1860 modules)
+ GET /favicon.ico 200 in 512ms
+ ✓ Compiled in 406ms (3151 modules)
+ GET / 200 in 125ms
+ GET /pricing 200 in 129ms
+ ✓ Compiled in 90ms (1308 modules)
+ GET / 200 in 45ms
+ GET /pricing 200 in 58ms
+ ✓ Compiled in 381ms (3153 modules)
+ GET / 200 in 79ms
+ GET /pricing 200 in 83ms
+ GET / 200 in 188ms
+ ✓ Compiled /favicon.ico in 81ms (1861 modules)
+ GET /favicon.ico 200 in 159ms
+ GET / 200 in 176ms
+ GET /favicon.ico 200 in 3ms
+ ✓ Compiled in 404ms (3152 modules)
+ GET / 200 in 141ms
+ GET /pricing 200 in 149ms
+ ✓ Compiled in 416ms (3152 modules)
+ GET / 200 in 107ms
+ GET /pricing 200 in 114ms
+ ✓ Compiled in 374ms (3152 modules)
+ GET / 200 in 123ms
+ GET /pricing 200 in 132ms
+ ✓ Compiled in 196ms (3152 modules)
+ GET / 200 in 54ms
+ GET /pricing 200 in 57ms
+ ✓ Compiled in 768ms (3155 modules)
+ GET / 200 in 141ms
+ GET /pricing 200 in 153ms
+ GET / 200 in 30ms
+ GET / 200 in 20ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 546ms (3146 modules)
+ GET /install 404 in 607ms
+ GET /install 404 in 75ms
+ GET / 200 in 134ms
+ ✓ Compiled in 244ms (3160 modules)
+ GET / 200 in 26ms
+ GET / 200 in 6ms
+ ✓ Compiled in 175ms (3160 modules)
+ GET / 200 in 19ms
+ GET / 200 in 6ms
+ GET /pricing 200 in 77ms
+ ✓ Compiled in 426ms (3155 modules)
+ GET / 200 in 81ms
+ GET /pricing 200 in 86ms
+ ✓ Compiled in 410ms (3155 modules)
+ GET / 200 in 92ms
+ GET /pricing 200 in 100ms
+ ✓ Compiled in 180ms (3155 modules)
+ GET / 200 in 57ms
+ GET /pricing 200 in 68ms
+ ✓ Compiled in 365ms (3155 modules)
+ GET / 200 in 88ms
+ GET /pricing 200 in 98ms
+ ✓ Compiled in 372ms (3155 modules)
+ GET / 200 in 97ms
+ GET /pricing 200 in 106ms
+ GET /pricing 200 in 195ms
+ ✓ Compiled /favicon.ico in 289ms (1863 modules)
+ GET /favicon.ico 200 in 369ms
+ ✓ Compiled in 295ms (3172 modules)
+ GET / 200 in 63ms
+ GET /pricing 200 in 67ms
+ ⨯ ./node_modules/framer-motion/dist/es/index.mjs
+Error: It's currently unsupported to use "export *" in a client boundary. Please use named exports instead.
+Import trace for requested module:
+./node_modules/framer-motion/dist/es/index.mjs
+./src/app/pricing/page.tsx
+ GET /pricing 500 in 103ms
+ GET / 500 in 106ms
+ GET /pricing 500 in 9ms
+ GET / 500 in 9ms
+ ✓ Compiled in 86ms (1309 modules)
+ GET / 500 in 3ms
+ GET /pricing 500 in 3ms
+ ○ Compiling /_not-found ...
+ ⨯ ./node_modules/framer-motion/dist/es/index.mjs
+Error: It's currently unsupported to use "export *" in a client boundary. Please use named exports instead.
+Import trace for requested module:
+./node_modules/framer-motion/dist/es/index.mjs
+./src/app/pricing/page.tsx
+ GET /_next/static/webpack/d23622ab32d47a3a.webpack.hot-update.json 500 in 504ms
+ GET /favicon.ico 500 in 524ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /_next/static/webpack/d23622ab32d47a3a.webpack.hot-update.json 500 in 3ms
+ GET /favicon.ico 500 in 4ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /pricing 500 in 19ms
+ GET / 500 in 24ms
+ GET /favicon.ico 500 in 2ms
+ GET /favicon.ico 500 in 3ms
+ GET /pricing 500 in 25ms
+ GET /favicon.ico 500 in 2ms
+ GET /_next/static/webpack/d23622ab32d47a3a.webpack.hot-update.json 500 in 6ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⨯ ./src/app/pricing/page.tsx
+Error:   [31mx[0m Unexpected token. Did you mean `{'}'}` or `&rbrace;`?
+     ,-[[36;1;4m/Users/philipp/development/elova-sales/src/app/pricing/page.tsx[0m:398:1]
+ [2m395[0m |       <Footer />
+ [2m396[0m |     </div>
+ [2m397[0m |   )
+ [2m398[0m | }
+     : [35;1m^[0m
+     `----
+  [31mx[0m Unexpected eof
+     ,-[[36;1;4m/Users/philipp/development/elova-sales/src/app/pricing/page.tsx[0m:398:3]
+ [2m396[0m |     </div>
+ [2m397[0m |   )
+ [2m398[0m | }
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/app/pricing/page.tsx
+ GET /pricing 200 in 287ms
+ GET /_next/static/webpack/d23622ab32d47a3a.webpack.hot-update.json 500 in 295ms
+ GET / 500 in 13ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /pricing 500 in 24ms
+ GET / 500 in 16ms
+ GET /favicon.ico 500 in 6ms
+ GET /favicon.ico 500 in 4ms
+ ✓ Compiled /_not-found in 932ms (3152 modules)
+ ⨯ ReferenceError: Header is not defined
+    at Pricing (src/app/pricing/page.tsx:390:11)
+  388 |         </Container>
+  389 |         <main>
+> 390 |           <Header />
+      |           ^
+  391 |           <PricingCards />
+  392 |           <PricingTable selectedTier={tier} />
+  393 |           <FAQSection /> {
+  digest: '1808519873'
+}
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /pricing 500 in 337ms
+ GET / 200 in 339ms
+ ✓ Compiled /favicon.ico in 128ms (1866 modules)
+ GET /favicon.ico 200 in 203ms
+ GET /favicon.ico 200 in 9ms
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ ✓ Compiled in 578ms (3161 modules)
+ ✓ Compiled in 0ms (1848 modules)
+ ✓ Compiled in 0ms (1848 modules)
+ ✓ Compiled in 1ms (1848 modules)
+ GET / 200 in 853ms
+ GET /pricing 200 in 865ms
+ ✓ Compiled /favicon.ico in 474ms (1865 modules)
+ GET /favicon.ico 200 in 558ms
+ ✓ Compiled in 468ms (3161 modules)
+ GET / 200 in 155ms
+ GET /pricing 200 in 159ms
+ ✓ Compiled in 408ms (3161 modules)
+ GET /pricing 200 in 100ms
+ ✓ Compiled in 459ms (3161 modules)
+ GET /pricing 200 in 130ms
+ GET / 200 in 31ms
+ GET / 200 in 57ms
+ GET / 200 in 44ms
+ GET / 200 in 10ms
+ ✓ Compiled in 1164ms (3161 modules)
+ ✓ Compiled in 394ms (3161 modules)
+ GET / 200 in 234ms
+ GET /pricing 200 in 78ms
+ GET / 200 in 522ms
+ GET / 200 in 595ms
+ GET / 200 in 582ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 3.4s (3152 modules)
+ GET / 404 in 3811ms
+ GET /_next/static/css/app/layout.css?v=1763971620955 404 in 37ms
+ GET /_next/static/chunks/main-app.js?v=1763971620955 404 in 73ms
+ GET /_next/static/chunks/app-pages-internals.js 404 in 72ms
+ ✓ Compiled in 804ms (3161 modules)
+ ✓ Compiled in 857ms (3161 modules)
+ ✓ Compiled in 3.2s (3161 modules)

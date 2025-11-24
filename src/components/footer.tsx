@@ -13,7 +13,7 @@ function CallToAction() {
           Ready to monitor your workflows?
         </p>
       </hgroup>
-      <p className="mx-auto mt-6 max-w-xs text-sm/6 text-gray-400">
+      <p className="mx-auto mt-6 max-w-xs text-sm/6 text-slate-400">
         Self-hosted workflow observability for n8n. Deploy in minutes with Docker.
       </p>
       <div className="mt-6">
@@ -26,7 +26,7 @@ function CallToAction() {
 }
 
 function SitemapHeading({ children }: { children: React.ReactNode }) {
-  return <h3 className="text-sm/6 font-medium text-gray-400">{children}</h3>
+  return <h3 className="text-sm/6 font-medium text-slate-400">{children}</h3>
 }
 
 function SitemapLinks({ children }: { children: React.ReactNode }) {
@@ -38,7 +38,7 @@ function SitemapLink(props: React.ComponentPropsWithoutRef<typeof Link>) {
     <li>
       <Link
         {...props}
-        className="font-medium text-white data-hover:text-gray-300"
+        className="font-medium text-white data-hover:text-slate-300"
       />
     </li>
   )
@@ -116,7 +116,7 @@ function SocialLinks() {
         href="https://facebook.com"
         target="_blank"
         aria-label="Visit us on Facebook"
-        className="text-gray-400 data-hover:text-gray-300"
+        className="text-slate-400 data-hover:text-slate-300"
       >
         <SocialIconFacebook className="size-4" />
       </Link>
@@ -124,7 +124,7 @@ function SocialLinks() {
         href="https://x.com"
         target="_blank"
         aria-label="Visit us on X"
-        className="text-gray-400 data-hover:text-gray-300"
+        className="text-slate-400 data-hover:text-slate-300"
       >
         <SocialIconX className="size-4" />
       </Link>
@@ -132,7 +132,7 @@ function SocialLinks() {
         href="https://linkedin.com"
         target="_blank"
         aria-label="Visit us on LinkedIn"
-        className="text-gray-400 data-hover:text-gray-300"
+        className="text-slate-400 data-hover:text-slate-300"
       >
         <SocialIconLinkedIn className="size-4" />
       </Link>
@@ -142,7 +142,7 @@ function SocialLinks() {
 
 function Copyright() {
   return (
-    <div className="text-sm/6 text-gray-400">
+    <div className="text-sm/6 text-slate-400">
       &copy; {new Date().getFullYear()} Elova
     </div>
   )
@@ -150,7 +150,7 @@ function Copyright() {
 
 export function Footer() {
   return (
-    <footer className="relative bg-gray-950">
+    <footer className="relative bg-slate-900">
       <Container>
         <CallToAction />
         <div className="pb-16">

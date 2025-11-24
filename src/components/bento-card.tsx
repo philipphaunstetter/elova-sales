@@ -25,21 +25,28 @@ export function BentoCard({
     <motion.div
       initial="idle"
       whileHover="active"
-      variants={{ idle: {}, active: {} }}
+      variants={{ idle: {}, active: { scale: 1.02 } }}
+      transition={{ duration: 0.2 }}
       data-dark={dark ? 'true' : undefined}
       className={clsx(
         className,
         'group relative flex flex-col overflow-hidden rounded-lg',
-        'bg-gray-900 shadow-xs ring-1 ring-white/10',
+        'bg-slate-800 shadow-xs ring-1 ring-white/10',
       )}
     >
-      <div className="relative h-80 shrink-0">
-        {graphic}
+      <div className="relative h-80 shrink-0 overflow-hidden">
+        <motion.div
+          variants={{ idle: { scale: 1 }, active: { scale: 1.05 } }}
+          transition={{ duration: 0.4 }}
+          className="h-full w-full"
+        >
+          {graphic}
+        </motion.div>
         {fade.includes('top') && (
-          <div className="absolute inset-0 bg-linear-to-b from-gray-900 to-50%" />
+          <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-slate-800 to-50%" />
         )}
         {fade.includes('bottom') && (
-          <div className="absolute inset-0 bg-linear-to-t from-gray-900 to-50%" />
+          <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-slate-800 to-50%" />
         )}
       </div>
       <div className="relative p-10">

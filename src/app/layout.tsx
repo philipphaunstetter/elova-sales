@@ -17,9 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className="bg-gray-950 text-white antialiased">
+      <body className="bg-slate-900 text-white antialiased">
         {children}
-        <SanityLive revalidateSyncTags={revalidateSyncTags} />
+        {/* <SanityLive revalidateSyncTags={revalidateSyncTags} /> */}
       </body>
     </html>
   )

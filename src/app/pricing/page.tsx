@@ -1,7 +1,7 @@
 import { Button } from '@/components/button'
 import { Container } from '@/components/container'
+import { FAQSection } from '@/components/faq-section'
 import { Footer } from '@/components/footer'
-import { Gradient, GradientBackground } from '@/components/gradient'
 import { Link } from '@/components/link'
 import { Navbar } from '@/components/navbar'
 import { Heading, Lead, Subheading } from '@/components/text'
@@ -29,17 +29,16 @@ const tiers = [
     highlights: [
       { description: '1 n8n Instance' },
       { description: '7-day Data Retention' },
-      { description: '3 Endpoint Monitors' },
       { description: 'Visual Flowchart Debugging' },
+      { description: 'AI Cost Monitoring' },
     ],
     features: [
       { section: 'Scale', name: 'n8n Instances', value: '1' },
-      { section: 'Scale', name: 'Team members', value: '1' },
+      { section: 'Scale', name: 'Team members', value: false },
       { section: 'Scale', name: 'Shared Projects', value: false },
       { section: 'Data', name: 'Retention', value: '7 days' },
-      { section: 'Data', name: 'Endpoint Monitors', value: 3 },
       { section: 'Features', name: 'Flowchart Viewer', value: true },
-      { section: 'Features', name: 'AI Cost Monitoring', value: false },
+      { section: 'Features', name: 'AI Cost Monitoring', value: true },
       { section: 'Features', name: 'Alerts (Email/Slack)', value: false },
       { section: 'Features', name: 'White-labeling', value: false },
       { section: 'Support', name: 'Support', value: 'Community' },
@@ -54,16 +53,15 @@ const tiers = [
     highlights: [
       { description: 'Everything from Community' },
       { description: '5 n8n Instances' },
-      { description: 'AI Cost & Token Tracking' },
       { description: '30-day Data Retention' },
       { description: 'Email & Slack Alerts' },
+      { description: '5 Team Members' },
     ],
     features: [
       { section: 'Scale', name: 'n8n Instances', value: '5' },
       { section: 'Scale', name: 'Team members', value: '5' },
       { section: 'Scale', name: 'Shared Projects', value: '3' },
       { section: 'Data', name: 'Retention', value: '30 days' },
-      { section: 'Data', name: 'Endpoint Monitors', value: 20 },
       { section: 'Features', name: 'Flowchart Viewer', value: true },
       { section: 'Features', name: 'AI Cost Monitoring', value: true },
       { section: 'Features', name: 'Alerts (Email/Slack)', value: true },
@@ -81,15 +79,14 @@ const tiers = [
       { description: 'Everything from Pro' },
       { description: '50 n8n Instances' },
       { description: 'Unlimited Data Retention' },
-      { description: 'White-labeling', disabled: true },
-      { description: 'Client Workspaces', disabled: true },
+      { description: '20 Team Members' },
+      { description: 'Priority Support' },
     ],
     features: [
       { section: 'Scale', name: 'n8n Instances', value: '50' },
       { section: 'Scale', name: 'Team members', value: '20' },
       { section: 'Scale', name: 'Shared Projects', value: '10' },
       { section: 'Data', name: 'Retention', value: 'Unlimited' },
-      { section: 'Data', name: 'Endpoint Monitors', value: 100 },
       { section: 'Features', name: 'Flowchart Viewer', value: true },
       { section: 'Features', name: 'AI Cost Monitoring', value: true },
       { section: 'Features', name: 'Alerts (Email/Slack)', value: true },
@@ -99,29 +96,26 @@ const tiers = [
   },
 ]
 
-function Header() {
+function PricingHeader() {
   return (
-    <Container className="mt-16">
-      <Heading as="h1">Pricing that grows with your automations.</Heading>
-      <Lead className="mt-6 max-w-3xl">
-        Start for free with our Community edition. Upgrade when you need more history, alerts, and team collaboration.
-      </Lead>
-    </Container>
-  )
-}
+    <div className="relative">
+      <Container className="relative pt-24 pb-24 sm:pt-32 lg:pb-32">
+        <div className="relative z-10">
+          <Heading as="h1" className="text-center">Pricing that grows with your automations</Heading>
+          <Lead className="mt-6 mx-auto max-w-2xl text-center">
+            Start for free with our Community edition. Upgrade when you need more history, alerts, and team collaboration.
+          </Lead>
+        </div>
 
-function PricingCards() {
-  return (
-    <div className="relative py-24">
-      <Gradient className="absolute inset-x-2 top-48 bottom-0 rounded-4xl ring-1 ring-black/5 ring-inset" />
-      <Container className="relative">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        {/* Pricing Cards */}
+        <div className="relative mx-auto mt-16 grid max-w-md grid-cols-1 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           {tiers.map((tier, tierIndex) => (
             <PricingCard key={tierIndex} tier={tier} />
           ))}
         </div>
-        <div className="mt-12 text-center">
-           <p className="text-gray-400">Need an Enterprise plan with custom limits? <Link href="mailto:sales@elova.io" className="text-blue-400 hover:underline">Contact us</Link>.</p>
+
+        <div className="mt-16 text-center">
+          <p className="text-gray-400">Need an Enterprise plan with custom limits? <Link href="mailto:sales@elova.io" className="text-rose-400 hover:underline">Contact us</Link>.</p>
         </div>
       </Container>
     </div>
@@ -129,37 +123,42 @@ function PricingCards() {
 }
 
 function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
+  const isPro = tier.slug === 'pro'
+  const cardBg = isPro ? 'bg-white shadow-2xl' : 'bg-slate-800/80'
+  const borderClass = isPro ? 'ring-2 ring-rose-500' : 'ring-1 ring-white/10'
+  const textColor = isPro ? 'text-gray-900' : 'text-white'
+  const descColor = isPro ? 'text-gray-600' : 'text-gray-400'
+  const priceColor = isPro ? 'text-gray-900' : 'text-white'
+  const borderColor = isPro ? 'border-gray-200' : 'border-white/10'
+  
   return (
-    <div className="-m-2 grid grid-cols-1 rounded-4xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-white/10 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
-      <div className="grid grid-cols-1 rounded-4xl p-2 shadow-md shadow-black/5">
-        <div className="rounded-3xl bg-gray-900 p-10 pb-9 shadow-2xl ring-1 ring-white/10">
-          <Subheading>{tier.name}</Subheading>
-          <p className="mt-2 text-sm/6 text-gray-400">{tier.description}</p>
-          <div className="mt-8 flex items-center gap-4">
-            <div className="text-5xl font-medium text-white">
-              ${tier.priceMonthly}
-            </div>
-            <div className="text-sm/5 text-gray-400">
-              <p>USD</p>
-              <p>per month</p>
-            </div>
-          </div>
-          <div className="mt-8">
-            <Button href={tier.href} variant={tier.priceMonthly === 0 ? 'outline' : 'primary'}>
-              {tier.priceMonthly === 0 ? 'Get Started' : 'Start free trial'}
-            </Button>
-          </div>
-          <div className="mt-8">
-            <h3 className="text-sm/6 font-medium text-white">
-              Includes:
-            </h3>
-            <ul className="mt-3 space-y-3">
-              {tier.highlights.map((props, featureIndex) => (
-                <FeatureItem key={featureIndex} {...props} />
-              ))}
-            </ul>
+    <div className={`relative rounded-2xl ${cardBg} p-8 ${borderClass} ${isPro ? 'z-10 lg:scale-105' : ''}`}>
+      {isPro && (
+        <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+          <div className="rounded-full bg-gradient-to-r from-rose-600 to-rose-500 px-4 py-1 text-xs font-semibold text-white shadow-lg">
+            Most Popular
           </div>
         </div>
+      )}
+      <div className="relative">
+        <h3 className={`text-lg font-semibold ${isPro ? 'text-rose-600' : 'text-white'}`}>{tier.name}</h3>
+        <p className={`mt-2 text-sm/6 ${descColor}`}>{tier.description}</p>
+        <div className="mt-6 flex items-baseline gap-x-2">
+          <span className={`text-5xl font-semibold tracking-tight ${priceColor}`}>
+            ${tier.priceMonthly}
+          </span>
+          <span className={`text-sm font-semibold ${descColor}`}>USD/month</span>
+        </div>
+        <div className="mt-8">
+          <Button href={tier.href} variant={isPro ? 'primary' : 'secondary'} className="w-full">
+            {tier.priceMonthly === 0 ? 'Get Started' : 'Start free trial'}
+          </Button>
+        </div>
+        <ul className={`mt-8 space-y-3 pt-8 border-t ${borderColor}`}>
+          {tier.highlights.map((props, featureIndex) => (
+            <FeatureItem key={featureIndex} {...props} featured={isPro} />
+          ))}
+        </ul>
       </div>
     </div>
   )
@@ -204,16 +203,16 @@ function PricingTable({
             ))}
           </tr>
           <tr className="sm:hidden">
-            <td className="p-0">
+            <td className="p-0" colSpan={4}>
               <div className="relative inline-block">
                 <Menu>
-                  <MenuButton className="flex items-center justify-between gap-2 font-medium">
+                  <MenuButton className="flex items-center justify-between gap-2 font-medium text-white">
                     {selectedTier.name}
-                    <ChevronUpDownIcon className="size-4 fill-gray-900" />
+                    <ChevronUpDownIcon className="size-4 fill-white" />
                   </MenuButton>
                   <MenuItems
                     anchor="bottom start"
-                    className="min-w-(--button-width) rounded-lg bg-white p-1 shadow-lg ring-1 ring-gray-200 [--anchor-gap:6px] [--anchor-offset:-4px] [--anchor-padding:10px]"
+                    className="min-w-(--button-width) rounded-lg bg-slate-800 p-1 shadow-lg ring-1 ring-white/10 [--anchor-gap:6px] [--anchor-offset:-4px] [--anchor-padding:10px]"
                   >
                     {tiers.map((tier) => (
                       <MenuItem key={tier.slug}>
@@ -223,7 +222,7 @@ function PricingTable({
                           data-selected={
                             tier === selectedTier ? true : undefined
                           }
-                          className="group flex items-center gap-2 rounded-md px-2 py-1 data-focus:bg-gray-200"
+                          className="group flex items-center gap-2 rounded-md px-2 py-1 text-white data-focus:bg-white/10"
                         >
                           {tier.name}
                           <CheckIcon className="hidden size-4 group-data-selected:block" />
@@ -233,31 +232,10 @@ function PricingTable({
                   </MenuItems>
                 </Menu>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center">
-                  <ChevronUpDownIcon className="size-4 fill-gray-900" />
+                  <ChevronUpDownIcon className="size-4 fill-white" />
                 </div>
               </div>
             </td>
-            <td colSpan={3} className="p-0 text-right">
-              <Button variant="outline" href={selectedTier.href}>
-                Get started
-              </Button>
-            </td>
-          </tr>
-          <tr className="max-sm:hidden">
-            <th className="p-0" scope="row">
-              <span className="sr-only">Get started</span>
-            </th>
-            {tiers.map((tier) => (
-              <td
-                key={tier.slug}
-                data-selected={selectedTier === tier ? true : undefined}
-                className="px-0 pt-4 pb-0 data-selected:table-cell max-sm:hidden"
-              >
-                <Button variant="outline" href={tier.href}>
-                  Get started
-                </Button>
-              </td>
-            ))}
           </tr>
         </thead>
         {[...new Set(tiers[0].features.map(({ section }) => section))].map(
@@ -269,7 +247,7 @@ function PricingTable({
                   colSpan={4}
                   className="px-0 pt-10 pb-0 group-first-of-type:pt-5"
                 >
-                  <div className="-mx-4 rounded-lg bg-gray-800 px-4 py-3 text-sm/6 font-semibold text-white">
+                  <div className="-mx-4 rounded-lg bg-slate-700 px-4 py-3 text-sm/6 font-semibold text-white">
                     {section}
                   </div>
                 </th>
@@ -279,7 +257,7 @@ function PricingTable({
                 .map(({ name }) => (
                   <tr
                     key={name}
-                    className="border-b border-gray-800 last:border-none"
+                    className="border-b border-slate-700 last:border-none"
                   >
                     <th
                       scope="row"
@@ -334,78 +312,21 @@ function PricingTable({
 function FeatureItem({
   description,
   disabled = false,
+  featured = false,
 }: {
   description: string
   disabled?: boolean
+  featured?: boolean
 }) {
   return (
     <li
       data-disabled={disabled ? true : undefined}
-      className="flex items-start gap-4 text-sm/6 text-gray-400 data-disabled:text-gray-500"
+      className={`flex items-start gap-3 text-sm/6 ${featured ? 'text-gray-700' : 'text-gray-400'} data-disabled:text-gray-500`}
     >
-      <span className="inline-flex h-6 items-center">
-        <PlusIcon className="size-3.75 shrink-0 fill-gray-500" />
-      </span>
+      <CheckIcon className={`h-5 w-5 flex-none ${featured ? 'text-rose-600' : 'text-gray-500'}`} aria-hidden="true" />
       {disabled && <span className="sr-only">Not included:</span>}
       {description}
     </li>
-  )
-}
-
-function PlusIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg viewBox="0 0 15 15" aria-hidden="true" {...props}>
-      <path clipRule="evenodd" d="M8 0H7v7H0v1h7v7h1V8h7V7H8V0z" />
-    </svg>
-  )
-}
-
-function FrequentlyAskedQuestions() {
-  return (
-    <Container>
-      <section id="faqs" className="scroll-mt-8">
-        <Subheading className="text-center">
-          Frequently asked questions
-        </Subheading>
-        <Heading as="div" className="mt-2 text-center">
-          Your questions answered.
-        </Heading>
-        <div className="mx-auto mt-16 mb-32 max-w-xl space-y-12">
-          <dl>
-            <dt className="text-sm font-semibold text-white">
-              How does the monitoring work?
-            </dt>
-            <dd className="mt-4 text-sm/6 text-gray-400">
-              Elova connects to your n8n instance via API. It fetches workflow execution data and presents it in a unified dashboard. We do not store your workflow data in the cloud; everything stays on your self-hosted instance.
-            </dd>
-          </dl>
-          <dl>
-            <dt className="text-sm font-semibold text-white">
-              Is the Community version really free?
-            </dt>
-            <dd className="mt-4 text-sm/6 text-gray-400">
-              Yes! The Community version is free forever for 1 n8n instance. It includes all core features like the flowchart debugger and endpoint monitoring.
-            </dd>
-          </dl>
-          <dl>
-            <dt className="text-sm font-semibold text-white">
-              Can I host it myself?
-            </dt>
-            <dd className="mt-4 text-sm/6 text-gray-400">
-              Absolutely. Elova is designed to be self-hosted using Docker. You can run it on the same server as your n8n instance or a separate one.
-            </dd>
-          </dl>
-          <dl>
-            <dt className="text-sm font-semibold text-white">
-              Do you support Zapier or Make.com?
-            </dt>
-            <dd className="mt-4 text-sm/6 text-gray-400">
-              Currently, we focus on n8n monitoring. Support for Zapier and Make.com is planned for the Enterprise tier in the future.
-            </dd>
-          </dl>
-        </div>
-      </section>
-    </Container>
   )
 }
 
@@ -421,16 +342,33 @@ export default async function Pricing({
       : tiers[0]
 
   return (
-    <main className="overflow-hidden">
-      <GradientBackground />
-      <Container>
-        <Navbar />
-      </Container>
-      <Header />
-      <PricingCards />
-      <PricingTable selectedTier={tier} />
-      <FrequentlyAskedQuestions />
-      <Footer />
-    </main>
+    <div className="overflow-hidden">
+      <div className="relative isolate bg-slate-900">
+        {/* Radial gradient overlay for entire page */}
+        <svg
+          viewBox="0 0 1208 1024"
+          aria-hidden="true"
+          className="absolute top-32 left-1/2 -z-10 h-256 -translate-x-1/2 blur-3xl opacity-20"
+        >
+          <ellipse cx={604} cy={512} rx={604} ry={512} fill="url(#pricing-gradient)" />
+          <defs>
+            <radialGradient id="pricing-gradient">
+              <stop stopColor="#f43f5e" />
+              <stop offset={1} stopColor="#be123c" />
+            </radialGradient>
+          </defs>
+        </svg>
+        
+        <Container>
+          <Navbar />
+        </Container>
+        <main>
+          <PricingHeader />
+          <PricingTable selectedTier={tier} />
+          <FAQSection />
+        </main>
+        <Footer />
+      </div>
+    </div>
   )
 }

@@ -1,4 +1,7 @@
+'use client'
+
 import { clsx } from 'clsx'
+import { motion } from 'framer-motion'
 
 export function Screenshot({
   width,
@@ -12,7 +15,11 @@ export function Screenshot({
   className?: string
 }) {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, scale: 0.95, y: 40 }}
+      whileInView={{ opacity: 1, scale: 1, y: 0 }}
+      viewport={{ once: true, margin: '-100px' }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
       style={{ '--width': width, '--height': height } as React.CSSProperties}
       className={clsx(
         className,
@@ -25,6 +32,6 @@ export function Screenshot({
         src={src}
         className="h-full rounded-(--radius) shadow-2xl ring-1 ring-black/10"
       />
-    </div>
+    </motion.div>
   )
 }
