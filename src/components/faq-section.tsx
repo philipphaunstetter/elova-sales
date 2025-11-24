@@ -1,0 +1,79 @@
+'use client'
+
+import { Container } from '@/components/container'
+import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
+import { MinusSmallIcon, PlusSmallIcon } from '@heroicons/react/24/outline'
+import { AnimatePresence, motion } from 'framer-motion'
+
+const faqs = [
+  {
+    question: 'How does the monitoring work?',
+    answer:
+      'Elova connects to your n8n instance via API. It fetches workflow execution data and presents it in a unified dashboard. We do not store your workflow data in the cloud; everything stays on your self-hosted instance.',
+  },
+  {
+    question: 'Is the Community version really free?',
+    answer:
+      'Yes! The Community version is free forever for 1 n8n instance. It includes all core features like the flowchart debugger and endpoint monitoring.',
+  },
+  {
+    question: 'Can I host it myself?',
+    answer:
+      'Absolutely. Elova is designed to be self-hosted using Docker. You can run it on the same server as your n8n instance or a separate one.',
+  },
+  {
+    question: 'Do you support Zapier or Make.com?',
+    answer:
+      'Currently, we focus on n8n monitoring. Support for Zapier and Make.com is planned for the Enterprise tier in the future.',
+  },
+]
+
+export function FAQSection() {
+  return (
+    <Container>
+      <section id="faqs" className="scroll-mt-8">
+        <div className="mx-auto max-w-4xl py-24 sm:py-32">
+          <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+            Frequently asked questions
+          </h2>
+          <dl className="mt-16 divide-y divide-white/10">
+            {faqs.map((faq) => (
+              <Disclosure key={faq.question} as="div" className="py-6 first:pt-0 last:pb-0">
+                {({ open }) => (
+                  <>
+                    <dt>
+                      <DisclosureButton className="group flex w-full items-start justify-between text-left text-white">
+                        <span className="text-base/7 font-semibold">{faq.question}</span>
+                        <span className="ml-6 flex h-7 items-center">
+                          <PlusSmallIcon aria-hidden="true" className="size-6 group-data-open:hidden" />
+                          <MinusSmallIcon aria-hidden="true" className="size-6 group-not-data-open:hidden" />
+                        </span>
+                      </DisclosureButton>
+                    </dt>
+                    <AnimatePresence initial={false}>
+                      {open && (
+                        <DisclosurePanel static className="mt-2">
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            transition={{ duration: 0.3, ease: 'easeInOut' }}
+                            className="overflow-hidden"
+                          >
+                            <div className="pr-12">
+                              <p className="text-base/7 text-gray-400">{faq.answer}</p>
+                            </div>
+                          </motion.div>
+                        </DisclosurePanel>
+                      )}
+                    </AnimatePresence>
+                  </>
+                )}
+              </Disclosure>
+            ))}
+          </dl>
+        </div>
+      </section>
+    </Container>
+  )
+}
