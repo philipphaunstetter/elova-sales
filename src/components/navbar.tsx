@@ -38,7 +38,7 @@ function DesktopNav() {
       </Link>
       <Link
         href="/try"
-        className="flex items-center px-4 py-2 text-base font-medium text-white border border-white/20 rounded-full data-hover:bg-white/10 transition-colors shadow-sm ring-1 ring-white/10"
+        className="flex items-center px-4 py-2 text-base font-medium text-white bg-white/10 rounded-full data-hover:bg-white/20 transition-colors shadow-md"
       >
         Try for Free
       </Link>
@@ -107,7 +107,7 @@ function MobileNav() {
         >
           <Link
             href="/try"
-            className="inline-block text-center px-4 py-2 text-base font-medium text-white border border-white/20 rounded-full shadow-sm ring-1 ring-white/10"
+            className="inline-block text-center px-4 py-2 text-base font-medium text-white bg-white/10 rounded-full shadow-md"
           >
             Try for Free
           </Link>
