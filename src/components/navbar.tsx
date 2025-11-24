@@ -15,22 +15,39 @@ const links = [
   { href: '/#use-cases', label: 'Use Cases' },
   { href: '/pricing', label: 'Pricing' },
   { href: '/blog', label: 'Blog' },
-  { href: '/login', label: 'Login' },
 ]
 
 function DesktopNav() {
   return (
-    <nav className="relative hidden lg:flex">
+    <nav className="relative hidden lg:flex lg:items-center lg:gap-2">
       {links.map(({ href, label }) => (
         <div key={href} className="relative flex">
           <Link
             href={href}
-            className="flex items-center px-4 py-3 text-base font-medium text-white bg-blend-multiply data-hover:bg-white/5"
+            className="flex items-center px-4 py-3 text-base font-medium text-white bg-blend-multiply data-hover:underline data-hover:underline-offset-4"
           >
             {label}
           </Link>
         </div>
       ))}
+      <Link
+        href="/login"
+        className="flex items-center px-4 py-3 text-base font-medium text-white bg-blend-multiply data-hover:underline data-hover:underline-offset-4"
+      >
+        Login
+      </Link>
+      <Link
+        href="/try"
+        className="flex items-center px-4 py-2 text-base font-medium text-white border border-white/20 rounded-full data-hover:bg-white/10 transition-colors shadow-sm ring-1 ring-white/10"
+      >
+        Try for Free
+      </Link>
+      <Link
+        href="/demo"
+        className="flex items-center px-4 py-2 text-base font-medium text-white bg-rose-600 rounded-full data-hover:bg-rose-500 transition-colors shadow-md"
+      >
+        Get a demo
+      </Link>
     </nav>
   )
 }
@@ -66,6 +83,51 @@ function MobileNav() {
             </Link>
           </motion.div>
         ))}
+        <motion.div
+          initial={{ opacity: 0, rotateX: -90 }}
+          animate={{ opacity: 1, rotateX: 0 }}
+          transition={{
+            duration: 0.15,
+            ease: 'easeInOut',
+            rotateX: { duration: 0.3, delay: links.length * 0.1 },
+          }}
+        >
+          <Link href="/login" className="text-base font-medium text-white">
+            Login
+          </Link>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, rotateX: -90 }}
+          animate={{ opacity: 1, rotateX: 0 }}
+          transition={{
+            duration: 0.15,
+            ease: 'easeInOut',
+            rotateX: { duration: 0.3, delay: (links.length + 1) * 0.1 },
+          }}
+        >
+          <Link
+            href="/try"
+            className="inline-block text-center px-4 py-2 text-base font-medium text-white border border-white/20 rounded-full shadow-sm ring-1 ring-white/10"
+          >
+            Try for Free
+          </Link>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, rotateX: -90 }}
+          animate={{ opacity: 1, rotateX: 0 }}
+          transition={{
+            duration: 0.15,
+            ease: 'easeInOut',
+            rotateX: { duration: 0.3, delay: (links.length + 2) * 0.1 },
+          }}
+        >
+          <Link
+            href="/demo"
+            className="inline-block text-center px-4 py-2 text-base font-medium text-white bg-rose-600 rounded-full shadow-md"
+          >
+            Get a demo
+          </Link>
+        </motion.div>
       </div>
       <div className="absolute left-1/2 w-screen -translate-x-1/2">
         <div className="absolute inset-x-0 top-0 border-t border-white/5" />
@@ -75,21 +137,28 @@ function MobileNav() {
   )
 }
 
+import { Container } from './container'
+import { NavbarReveal } from './navbar-reveal'
+
 export function Navbar() {
   return (
-    <Disclosure as="header" className="pt-12 sm:pt-16">
-        <div className="relative flex justify-between">
-          <div className="relative flex gap-6">
-            <div className="py-3 flex items-center">
-              <Link href="/" title="Home">
-                <Logo className="h-9" />
-              </Link>
+    <NavbarReveal>
+      <Disclosure as="header" className="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-white/5 w-full">
+        <Container>
+          <div className="relative flex justify-between py-4">
+            <div className="relative flex gap-6">
+              <div className="flex items-center">
+                <Link href="/" title="Home">
+                  <Logo className="h-9" />
+                </Link>
+              </div>
             </div>
+            <DesktopNav />
+            <MobileNavButton />
           </div>
-          <DesktopNav />
-          <MobileNavButton />
-        </div>
-      <MobileNav />
-    </Disclosure>
+        </Container>
+        <MobileNav />
+      </Disclosure>
+    </NavbarReveal>
   )
 }
