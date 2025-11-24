@@ -11,8 +11,7 @@ const variants = {
   ),
   secondary: clsx(
     'relative inline-flex items-center justify-center px-4 py-[calc(--spacing(2)-1px)]',
-    'rounded-full border border-transparent bg-white/10 shadow-md ring-1 ring-white/10',
-    'after:absolute after:inset-0 after:rounded-full after:shadow-[inset_0_0_2px_1px_#ffffff1a]',
+    'rounded-full border border-transparent bg-white/10 shadow-md',
     'text-base font-medium whitespace-nowrap text-white',
     'data-disabled:bg-white/10 data-disabled:opacity-40 data-hover:bg-white/20',
   ),
