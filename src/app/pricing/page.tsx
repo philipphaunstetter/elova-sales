@@ -126,7 +126,6 @@ function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
   const isPro = tier.slug === 'pro'
   const cardBg = isPro ? 'bg-white shadow-2xl' : 'bg-slate-800/80'
   const borderClass = isPro ? 'ring-2 ring-rose-500' : 'ring-1 ring-white/10'
-  const textColor = isPro ? 'text-gray-900' : 'text-white'
   const descColor = isPro ? 'text-gray-600' : 'text-gray-400'
   const priceColor = isPro ? 'text-gray-900' : 'text-white'
   const borderColor = isPro ? 'border-gray-200' : 'border-white/10'

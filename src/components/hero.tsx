@@ -3,7 +3,6 @@
 import { Button } from '@/components/button'
 import { Container } from '@/components/container'
 import { HeroBadge } from '@/components/hero-badge'
-import { Link } from '@/components/link'
 import { Navbar } from '@/components/navbar'
 import { motion } from 'framer-motion'
 
