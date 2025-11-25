@@ -165,7 +165,7 @@ function UseCasesSection() {
             <div className="mb-2 text-sm font-semibold text-rose-400">IT Operations</div>
             <h4 className="text-lg font-semibold text-white">Visual Root Cause Analysis</h4>
             <p className="mt-4 flex-auto text-sm leading-6 text-gray-400">
-              When a critical sync fails at 3 AM, don't parse JSON logs. See exactly which node broke, the data payload it received, and the error output instantly.
+              When a critical sync fails at 3 AM, don&apos;t parse JSON logs. See exactly which node broke, the data payload it received, and the error output instantly.
             </p>
           </div>
         </motion.div>
