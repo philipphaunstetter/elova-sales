@@ -14,7 +14,6 @@ const links = [
   { href: '/#features', label: 'Features' },
   { href: '/#use-cases', label: 'Use Cases' },
   { href: '/pricing', label: 'Pricing' },
-  { href: '/blog', label: 'Blog' },
 ]
 
 function DesktopNav() {
