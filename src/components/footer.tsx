@@ -131,7 +131,7 @@ function SocialLinks() {
         <SocialIconX className="size-4" />
       </Link>
       <Link
-        href="https://linkedin.com"
+        href="https://www.linkedin.com/company/elova-n8n-monitoring/"
         target="_blank"
         aria-label="Visit us on LinkedIn"
         className="text-slate-400 data-hover:text-slate-300"
