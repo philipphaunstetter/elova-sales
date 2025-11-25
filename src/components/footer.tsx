@@ -75,6 +75,8 @@ function Sitemap() {
         <SitemapLinks>
           <SitemapLink href="#">Terms of service</SitemapLink>
           <SitemapLink href="#">Privacy policy</SitemapLink>
+          <SitemapLink href="/imprint">Imprint</SitemapLink>
+          <SitemapLink href="/accessibility-statement">Accessibility Statement</SitemapLink>
         </SitemapLinks>
       </div>
     </>

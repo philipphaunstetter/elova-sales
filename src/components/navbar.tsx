@@ -6,7 +6,7 @@ import {
   DisclosurePanel,
 } from '@headlessui/react'
 import { Bars2Icon } from '@heroicons/react/24/solid'
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { Link } from './link'
 import { Logo } from './logo'
 
@@ -65,74 +65,88 @@ function MobileNavButton() {
 
 function MobileNav() {
   return (
-    <DisclosurePanel className="lg:hidden">
-      <div className="flex flex-col gap-6 py-4">
-        {links.map(({ href, label }, linkIndex) => (
-          <motion.div
-            initial={{ opacity: 0, rotateX: -90 }}
-            animate={{ opacity: 1, rotateX: 0 }}
-            transition={{
-              duration: 0.15,
-              ease: 'easeInOut',
-              rotateX: { duration: 0.3, delay: linkIndex * 0.1 },
-            }}
-            key={href}
-          >
-            <Link href={href} className="text-base font-medium text-white">
-              {label}
-            </Link>
-          </motion.div>
-        ))}
-        <motion.div
-          initial={{ opacity: 0, rotateX: -90 }}
-          animate={{ opacity: 1, rotateX: 0 }}
-          transition={{
-            duration: 0.15,
-            ease: 'easeInOut',
-            rotateX: { duration: 0.3, delay: links.length * 0.1 },
-          }}
-        >
-          <Link href="/login" className="text-base font-medium text-white">
-            Login
-          </Link>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, rotateX: -90 }}
-          animate={{ opacity: 1, rotateX: 0 }}
-          transition={{
-            duration: 0.15,
-            ease: 'easeInOut',
-            rotateX: { duration: 0.3, delay: (links.length + 1) * 0.1 },
-          }}
-        >
-          <Link
-            href="/try"
-            className="inline-block text-center px-4 py-2 text-base font-medium text-white border border-white/20 rounded-full"
-          >
-            Try for Free
-          </Link>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, rotateX: -90 }}
-          animate={{ opacity: 1, rotateX: 0 }}
-          transition={{
-            duration: 0.15,
-            ease: 'easeInOut',
-            rotateX: { duration: 0.3, delay: (links.length + 2) * 0.1 },
-          }}
-        >
-          <Link
-            href="/demo"
-            className="inline-block text-center px-4 py-2 text-base font-medium text-white bg-rose-600 rounded-full shadow-md"
-          >
-            Get a demo
-          </Link>
-        </motion.div>
-      </div>
-      <div className="absolute left-1/2 w-screen -translate-x-1/2">
-        <div className="absolute inset-x-0 top-0 border-t border-white/5" />
-        <div className="absolute inset-x-0 top-2 border-t border-white/5" />
-      </div>
+    <DisclosurePanel static className="lg:hidden">
+      {({ open }) => (
+        <AnimatePresence>
+          {open && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3, ease: 'easeInOut' }}
+              className="relative overflow-hidden"
+            >
+              <div className="flex flex-col gap-6 px-6 py-4">
+                {links.map(({ href, label }, linkIndex) => (
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{
+                      duration: 0.3,
+                      ease: 'easeInOut',
+                      delay: linkIndex * 0.1,
+                    }}
+                    key={href}
+                  >
+                    <Link href={href} className="block w-full text-center text-base font-medium text-white">
+                      {label}
+                    </Link>
+                  </motion.div>
+                ))}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{
+                    duration: 0.3,
+                    ease: 'easeInOut',
+                    delay: links.length * 0.1,
+                  }}
+                >
+                  <Link href="/login" className="block w-full text-center text-base font-medium text-white">
+                    Login
+                  </Link>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{
+                    duration: 0.3,
+                    ease: 'easeInOut',
+                    delay: (links.length + 1) * 0.1,
+                  }}
+                >
+                  <Link
+                    href="/try"
+                    className="block w-full text-center px-4 py-2 text-base font-medium text-white border border-white/20 rounded-full"
+                  >
+                    Try for Free
+                  </Link>
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{
+                    duration: 0.3,
+                    ease: 'easeInOut',
+                    delay: (links.length + 2) * 0.1,
+                  }}
+                >
+                  <Link
+                    href="/demo"
+                    className="block w-full text-center px-4 py-2 text-base font-medium text-white bg-rose-600 rounded-full shadow-md"
+                  >
+                    Get a demo
+                  </Link>
+                </motion.div>
+              </div>
+              <div className="absolute left-1/2 top-0 w-screen -translate-x-1/2">
+                <div className="absolute inset-x-0 top-0 border-t border-white/5" />
+                <div className="absolute inset-x-0 top-2 border-t border-white/5" />
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      )}
     </DisclosurePanel>
   )
 }
