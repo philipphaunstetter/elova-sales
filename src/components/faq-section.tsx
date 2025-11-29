@@ -33,14 +33,25 @@ export function FAQSection() {
     <Container>
       <section id="faqs" className="scroll-mt-8">
         <div className="mx-auto max-w-4xl py-24 sm:py-32">
-          <h2 className="text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.5 }}
+            className="text-4xl font-semibold tracking-tight text-white sm:text-5xl"
+          >
             Frequently asked questions
-          </h2>
+          </motion.h2>
           <dl className="mt-16 divide-y divide-white/10">
-            {faqs.map((faq) => (
+            {faqs.map((faq, index) => (
               <Disclosure key={faq.question} as="div" className="py-6 first:pt-0 last:pb-0">
                 {({ open }) => (
-                  <>
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '-100px' }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                  >
                     <dt>
                       <DisclosureButton className="group flex w-full items-start justify-between text-left text-white">
                         <span className="text-base/7 font-semibold">{faq.question}</span>
@@ -67,7 +78,7 @@ export function FAQSection() {
                         </DisclosurePanel>
                       )}
                     </AnimatePresence>
-                  </>
+                  </motion.div>
                 )}
               </Disclosure>
             ))}
