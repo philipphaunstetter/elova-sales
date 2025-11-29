@@ -25,7 +25,7 @@ function ScreenshotSection() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.5 }}
         >
-          <Heading as="h2" className="max-w-3xl">
+          <Heading as="h2" className="max-w-7xl">
             Stop flying blind with your automations.
           </Heading>
         </motion.div>
@@ -50,7 +50,7 @@ function FeaturesSection() {
         transition={{ duration: 0.5 }}
       >
         <Subheading>Features</Subheading>
-        <Heading as="h3" className="mt-2 max-w-3xl">
+        <Heading as="h3" className="mt-2 max-w-4xl">
           Monitor, debug, and optimize with confidence.
         </Heading>
       </motion.div>
@@ -113,7 +113,7 @@ function UseCasesSection() {
         transition={{ duration: 0.5 }}
       >
         <Subheading>Use Cases</Subheading>
-        <Heading as="h3" className="mt-2 max-w-3xl">
+        <Heading as="h3" className="mt-2 max-w-4xl">
           Built for mission-critical automation teams.
         </Heading>
       </motion.div>

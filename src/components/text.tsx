@@ -19,7 +19,7 @@ export function Heading({
       data-dark={dark ? 'true' : undefined}
       className={clsx(
         className,
-        'text-4xl font-medium tracking-tighter text-pretty text-white sm:text-6xl',
+        'text-4xl font-medium tracking-tight text-pretty text-white sm:text-6xl',
       )}
     />
   )

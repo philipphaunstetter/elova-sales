@@ -48,8 +48,8 @@ export function Hero() {
             <Button href="/early-access">
               Get Early Access
             </Button>
-            <Button variant="secondary" href="/#features">
-              View Features
+            <Button variant="secondary" href="https://docs.elova.dev">
+              Read the Docs
             </Button>
           </motion.div>
         </div>

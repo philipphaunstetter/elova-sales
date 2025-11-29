@@ -51,14 +51,11 @@ function Sitemap() {
         <SitemapHeading>Product</SitemapHeading>
         <SitemapLinks>
           <SitemapLink href="/pricing">Pricing</SitemapLink>
-          <SitemapLink href="/#features">Features</SitemapLink>
-          <SitemapLink href="/#use-cases">Use Cases</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
         <SitemapHeading>Resources</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="/blog">Blog</SitemapLink>
           <SitemapLink href="https://github.com/philipphaunstetter/n8n-analytics">GitHub</SitemapLink>
           <SitemapLink href="https://github.com/philipphaunstetter/n8n-analytics/blob/main/docs/prd.md">Documentation</SitemapLink>
         </SitemapLinks>
@@ -66,8 +63,8 @@ function Sitemap() {
       <div>
         <SitemapHeading>Support</SitemapHeading>
         <SitemapLinks>
+          <SitemapLink href="https://discord.gg/9v9v9v9v9v">Discord</SitemapLink>
           <SitemapLink href="https://github.com/philipphaunstetter/n8n-analytics/issues">Community</SitemapLink>
-          <SitemapLink href="mailto:support@elova.io">Contact</SitemapLink>
         </SitemapLinks>
       </div>
       <div>

@@ -11,8 +11,6 @@ import { Link } from './link'
 import { Logo } from './logo'
 
 const links = [
-  { href: '/#features', label: 'Features' },
-  { href: '/#use-cases', label: 'Use Cases' },
   { href: '/pricing', label: 'Pricing' },
   { href: 'https://docs.elova.dev', label: 'Docs' },
 ]
@@ -30,18 +28,6 @@ function DesktopNav() {
           </Link>
         </div>
       ))}
-      <Link
-        href="/login"
-        className="flex items-center px-4 py-3 text-base font-medium text-white bg-blend-multiply data-hover:underline data-hover:underline-offset-4"
-      >
-        Login
-      </Link>
-      <Link
-        href="/try"
-        className="flex items-center px-4 py-2 text-base font-medium text-white border border-white/20 rounded-full data-hover:bg-white/10 transition-colors"
-      >
-        Try for Free
-      </Link>
       <Link
         href="/early-access"
         className="flex items-center px-4 py-2 text-base font-medium text-white bg-rose-600 rounded-full data-hover:bg-rose-500 transition-colors shadow-md"
@@ -100,35 +86,6 @@ function MobileNav() {
                     duration: 0.3,
                     ease: 'easeInOut',
                     delay: links.length * 0.1,
-                  }}
-                >
-                  <Link href="/login" className="block w-full text-center text-base font-medium text-white">
-                    Login
-                  </Link>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{
-                    duration: 0.3,
-                    ease: 'easeInOut',
-                    delay: (links.length + 1) * 0.1,
-                  }}
-                >
-                  <Link
-                    href="/try"
-                    className="block w-full text-center px-4 py-2 text-base font-medium text-white border border-white/20 rounded-full"
-                  >
-                    Try for Free
-                  </Link>
-                </motion.div>
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{
-                    duration: 0.3,
-                    ease: 'easeInOut',
-                    delay: (links.length + 2) * 0.1,
                   }}
                 >
                   <Link
