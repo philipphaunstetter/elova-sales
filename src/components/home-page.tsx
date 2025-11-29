@@ -10,6 +10,7 @@ import { Footer } from '@/components/footer'
 import { Hero } from '@/components/hero'
 import { Map } from '@/components/map'
 import { Screenshot } from '@/components/screenshot'
+import { ScrollToTop } from '@/components/scroll-to-top'
 import { Heading, Subheading } from '@/components/text'
 import { Container } from '@/components/container'
 import { motion } from 'framer-motion'
@@ -177,6 +178,7 @@ function UseCasesSection() {
 export function HomePage() {
   return (
     <div className="overflow-hidden">
+      <ScrollToTop />
       <Hero />
       <main>
         <div className="py-32">
