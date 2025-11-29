@@ -150,11 +150,11 @@ function Copyright() {
   )
 }
 
-export function Footer() {
+export function Footer({ hideCta = false }: { hideCta?: boolean }) {
   return (
     <footer className="relative bg-slate-900">
       <Container>
-        <CallToAction />
+        {!hideCta && <CallToAction />}
         <div className="pb-16">
           <div className="grid grid-cols-2 gap-y-10 pb-6 lg:grid-cols-6 lg:gap-8 border-t border-white/10 pt-16">
             <div className="col-span-2 flex">

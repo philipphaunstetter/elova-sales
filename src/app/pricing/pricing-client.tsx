@@ -22,7 +22,7 @@ const tiers = [
     description: 'For solo developers and hobbyists.',
     priceMonthly: 12,
     priceAnnually: 120,
-    href: '#',
+    href: '/early-access',
     highlights: [
       { description: '1 n8n Instance' },
       { description: '7-day Data Retention' },
@@ -47,7 +47,7 @@ const tiers = [
     description: 'For production workflows and small teams.',
     priceMonthly: 39,
     priceAnnually: 390,
-    href: '#',
+    href: '/early-access',
     highlights: [
       { description: 'Everything from Community' },
       { description: '5 n8n Instances' },
@@ -73,7 +73,7 @@ const tiers = [
     description: 'For agencies and scaling companies.',
     priceMonthly: 199,
     priceAnnually: 1990,
-    href: '#',
+    href: '/early-access',
     highlights: [
       { description: 'Everything from Pro' },
       { description: '50 n8n Instances' },
@@ -234,7 +234,7 @@ function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
         </div>
         <div className="mt-8">
           <Button href={tier.href} variant={isPro ? 'primary' : 'secondary'} className="w-full">
-            {tier.priceMonthly === 0 ? 'Get Started' : 'Start free trial'}
+            Get Early Access
           </Button>
         </div>
         <ul className={`mt-8 space-y-3 pt-8 border-t ${borderColor}`}>
