@@ -14,6 +14,7 @@ const links = [
   { href: '/#features', label: 'Features' },
   { href: '/#use-cases', label: 'Use Cases' },
   { href: '/pricing', label: 'Pricing' },
+  { href: 'https://docs.elova.dev', label: 'Docs' },
 ]
 
 function DesktopNav() {
