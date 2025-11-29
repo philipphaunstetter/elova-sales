@@ -42,10 +42,10 @@ function DesktopNav() {
         Try for Free
       </Link>
       <Link
-        href="/demo"
+        href="/early-access"
         className="flex items-center px-4 py-2 text-base font-medium text-white bg-rose-600 rounded-full data-hover:bg-rose-500 transition-colors shadow-md"
       >
-        Get a demo
+        Get Early Access
       </Link>
     </nav>
   )
@@ -131,10 +131,10 @@ function MobileNav() {
                   }}
                 >
                   <Link
-                    href="/demo"
+                    href="/early-access"
                     className="block w-full text-center px-4 py-2 text-base font-medium text-white bg-rose-600 rounded-full shadow-md"
                   >
-                    Get a demo
+                    Get Early Access
                   </Link>
                 </motion.div>
               </div>
