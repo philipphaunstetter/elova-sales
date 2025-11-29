@@ -16,7 +16,7 @@ export async function joinWaitlist(email: string) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${secret}`,
+        'Authorization': `${secret}`,
       },
       body: JSON.stringify({ 
         email,
