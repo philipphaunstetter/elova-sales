@@ -26,8 +26,9 @@ export async function joinWaitlist(email: string) {
     })
 
     if (!response.ok) {
-      console.error(`Webhook failed with status: ${response.status}`)
-      return { success: false, error: 'Failed to join waitlist' }
+      const text = await response.text()
+      console.error(`Webhook failed with status: ${response.status}`, text)
+      return { success: false, error: `Failed to join waitlist: ${response.status}` }
     }
 
     return { success: true }
