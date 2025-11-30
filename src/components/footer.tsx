@@ -17,7 +17,7 @@ function CallToAction() {
         Self-hosted workflow observability for n8n. Deploy in minutes with Docker.
       </p>
       <div className="mt-6">
-        <Button className="w-full sm:w-auto" href="https://github.com/philipphaunstetter/n8n-analytics">
+        <Button className="w-full sm:w-auto" href="https://github.com/philipphaunstetter/n8n-analytics" target="_blank">
           View on GitHub
         </Button>
       </div>
@@ -56,15 +56,15 @@ function Sitemap() {
       <div>
         <SitemapHeading>Resources</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="https://github.com/philipphaunstetter/n8n-analytics">GitHub</SitemapLink>
-          <SitemapLink href="https://github.com/philipphaunstetter/n8n-analytics/blob/main/docs/prd.md">Documentation</SitemapLink>
+          <SitemapLink href="https://github.com/philipphaunstetter/n8n-analytics" target="_blank">GitHub</SitemapLink>
+          <SitemapLink href="https://github.com/philipphaunstetter/n8n-analytics/blob/main/docs/prd.md" target="_blank">Documentation</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
         <SitemapHeading>Support</SitemapHeading>
         <SitemapLinks>
-          <SitemapLink href="https://discord.gg/9v9v9v9v9v">Discord</SitemapLink>
-          <SitemapLink href="https://github.com/philipphaunstetter/n8n-analytics/issues">Community</SitemapLink>
+          <SitemapLink href="https://discord.gg/9v9v9v9v9v" target="_blank">Discord</SitemapLink>
+          <SitemapLink href="https://github.com/philipphaunstetter/n8n-analytics/issues" target="_blank">Community</SitemapLink>
         </SitemapLinks>
       </div>
       <div>
