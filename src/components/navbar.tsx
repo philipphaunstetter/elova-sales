@@ -23,7 +23,7 @@ function DesktopNav() {
           <Link
             href={href}
             target={target}
-            className="flex items-center px-4 py-3 text-base font-medium text-white bg-blend-multiply data-hover:underline data-hover:underline-offset-4"
+            className="flex items-center px-4 py-3 text-base font-medium text-slate-700 bg-blend-multiply data-hover:underline data-hover:underline-offset-4"
           >
             {label}
           </Link>
@@ -31,7 +31,7 @@ function DesktopNav() {
       ))}
       <Link
         href="/early-access"
-        className="flex items-center px-4 py-2 text-base font-medium text-white bg-rose-600 rounded-full data-hover:bg-rose-500 transition-colors shadow-md"
+        className="flex items-center px-4 py-2 text-base font-medium text-white bg-rose-600 rounded-full data-hover:bg-rose-700 transition-colors shadow-md"
       >
         Get Early Access
       </Link>
@@ -42,10 +42,10 @@ function DesktopNav() {
 function MobileNavButton() {
   return (
     <DisclosureButton
-      className="flex size-12 items-center justify-center self-center rounded-lg data-hover:bg-white/5 lg:hidden"
+      className="flex size-12 items-center justify-center self-center rounded-lg data-hover:bg-slate-100 lg:hidden"
       aria-label="Open main menu"
     >
-      <Bars2Icon className="size-6 text-white" />
+      <Bars2Icon className="size-6 text-slate-700" />
     </DisclosureButton>
   )
 }
@@ -78,7 +78,7 @@ function MobileNav() {
                     <Link
                       href={href}
                       target={target}
-                      className="block w-full text-center text-base font-medium text-white"
+                      className="block w-full text-center text-base font-medium text-slate-700"
                     >
                       {label}
                     </Link>
@@ -95,14 +95,14 @@ function MobileNav() {
                 >
                   <Link
                     href="/early-access"
-                    className="block w-full text-center px-4 py-2 text-base font-medium text-white bg-rose-600 rounded-full shadow-md"
+                    className="block w-full text-center px-4 py-2 text-base font-medium text-white bg-rose-600 rounded-full shadow-md data-hover:bg-rose-700"
                   >
                     Get Early Access
                   </Link>
                 </motion.div>
               </div>
               <div className="absolute left-1/2 top-0 w-screen -translate-x-1/2">
-                <div className="absolute inset-x-0 top-0 border-t border-white/5" />
+                <div className="absolute inset-x-0 top-0 border-t border-slate-200" />
               </div>
             </motion.div>
           )}
@@ -118,7 +118,7 @@ import { NavbarReveal } from './navbar-reveal'
 export function Navbar() {
   return (
     <NavbarReveal>
-      <Disclosure as="header" className="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-white/5 w-full">
+      <Disclosure as="header" className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 w-full">
         <Container>
           <div className="relative flex justify-between py-4">
             <div className="relative flex gap-6">

@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function EarlyAccess() {
   return (
-    <div className="overflow-hidden bg-slate-900">
+    <div className="overflow-hidden bg-white">
       <div className="relative isolate">
          {/* Radial gradient overlay for entire page */}
          <svg
@@ -35,10 +35,10 @@ export default function EarlyAccess() {
               <Container className="relative">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-16 sm:py-20">
                   <div className="text-left">
-                    <h1 className="font-display text-4xl font-semibold tracking-tight text-white sm:text-6xl">
-                      Join the <span className="text-rose-500">Early Access</span> Program
+                    <h1 className="font-display text-4xl font-semibold tracking-tight text-slate-900 sm:text-6xl">
+                      Join the <span className="text-rose-600">Early Access</span> Program
                     </h1>
-                    <p className="mt-6 text-lg leading-8 text-gray-300">
+                    <p className="mt-6 text-lg leading-8 text-slate-600">
                       Be the first to get access to Elova and shape the future of n8n observability.
                       We are currently rolling out invites in batches.
                     </p>

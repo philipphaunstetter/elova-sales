@@ -24,16 +24,16 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-display text-4xl font-semibold tracking-tight text-balance text-white sm:text-6xl md:text-7xl"
+            className="font-display text-4xl font-semibold tracking-tight text-balance text-slate-900 sm:text-6xl md:text-7xl"
           >
             The Missing Observability Layer for{' '}
-            <span className="text-rose-500">n8n</span>
+            <span className="text-rose-600">n8n</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-8 max-w-2xl text-lg font-medium text-gray-400 sm:text-xl/8"
+            className="mt-8 max-w-2xl text-lg font-medium text-slate-600 sm:text-xl/8"
           >
             Self-hosted monitoring, visual debugging, and reliability checks for
             your critical automations. Built for IT Ops, Agencies, and AI

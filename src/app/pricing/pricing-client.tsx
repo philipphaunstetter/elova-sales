@@ -115,7 +115,7 @@ function PricingHeader() {
           className="relative z-10"
         >
           <Heading as="h1" className="text-center">Pricing that grows with your automations</Heading>
-          <Lead className="mt-6 mx-auto max-w-2xl text-center !text-gray-100">
+          <Lead className="mt-6 mx-auto max-w-2xl text-center !text-slate-600">
             Start for free with our Community edition. Upgrade when you need more history, alerts, and team collaboration.
           </Lead>
         </motion.div>
@@ -157,7 +157,7 @@ function PricingCardsSection({
         transition={{ duration: 0.5 }}
         className="mt-16 text-center"
       >
-        <p className="text-gray-400">Need an Enterprise plan with custom limits? <Link href="mailto:sales@elova.io" className="text-rose-400 hover:underline">Contact us</Link>.</p>
+        <p className="text-slate-600">Need an Enterprise plan with custom limits? <Link href="mailto:sales@elova.io" className="text-rose-600 hover:underline">Contact us</Link>.</p>
       </motion.div>
 
       {/* Community Edition Section */}
@@ -172,9 +172,9 @@ function PricingCardsSection({
           <Heading as="h2" className="!text-white">Looking for something else?</Heading>
         </div>
         <div className="mt-8 lg:mt-0 lg:w-1/2 lg:pl-16">
-          <div className="rounded-2xl bg-slate-900 p-8 ring-1 ring-white/10">
-            <h3 className="text-lg font-semibold text-white">Community Edition</h3>
-            <p className="mt-2 text-sm/6 text-gray-400">
+          <div className="rounded-2xl bg-white p-8 ring-1 ring-slate-200">
+            <h3 className="text-lg font-semibold text-slate-900">Community Edition</h3>
+            <p className="mt-2 text-sm/6 text-slate-600">
               A standard, self-hosted version of Elova is available on GitHub.
             </p>
             <div className="mt-6 flex gap-4">
@@ -195,11 +195,11 @@ function PricingCardsSection({
 
 function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
   const isPro = tier.slug === 'pro'
-  const cardBg = isPro ? 'bg-white shadow-2xl' : 'bg-slate-800/80'
-  const borderClass = isPro ? 'ring-2 ring-rose-500' : 'ring-1 ring-white/10'
-  const descColor = isPro ? 'text-gray-600' : 'text-gray-400'
-  const priceColor = isPro ? 'text-gray-900' : 'text-white'
-  const borderColor = isPro ? 'border-gray-200' : 'border-white/10'
+  const cardBg = isPro ? 'bg-white shadow-2xl' : 'bg-white shadow-md'
+  const borderClass = isPro ? 'ring-2 ring-rose-500' : 'ring-1 ring-slate-200'
+  const descColor = isPro ? 'text-slate-600' : 'text-slate-600'
+  const priceColor = isPro ? 'text-slate-900' : 'text-slate-900'
+  const borderColor = isPro ? 'border-slate-200' : 'border-slate-200'
   
   return (
     <div className={`relative rounded-2xl ${cardBg} p-8 ${borderClass} ${isPro ? 'lg:scale-105' : ''}`}>
@@ -211,7 +211,7 @@ function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
         </div>
       )}
       <div className="relative">
-        <h3 className={`text-lg font-semibold ${isPro ? 'text-rose-600' : 'text-white'}`}>{tier.name}</h3>
+        <h3 className={`text-lg font-semibold ${isPro ? 'text-rose-600' : 'text-slate-900'}`}>{tier.name}</h3>
         <p className={`mt-2 text-sm/6 ${descColor}`}>{tier.description}</p>
         <div className="mt-6 flex items-baseline gap-x-2 group-has-[[name=frequency][value=monthly]:checked]/tiers:flex hidden">
           <span className={`text-5xl font-semibold tracking-tight ${priceColor}`}>
@@ -289,13 +289,13 @@ function PricingTable({
             <td className="p-0" colSpan={4}>
               <div className="relative inline-block">
                 <Menu>
-                  <MenuButton className="flex items-center justify-between gap-2 font-medium text-white">
+                  <MenuButton className="flex items-center justify-between gap-2 font-medium text-slate-900">
                     {selectedTier.name}
-                    <ChevronUpDownIcon className="size-4 fill-white" />
+                    <ChevronUpDownIcon className="size-4 fill-slate-900" />
                   </MenuButton>
                   <MenuItems
                     anchor="bottom start"
-                    className="min-w-(--button-width) rounded-lg bg-slate-800 p-1 shadow-lg ring-1 ring-white/10 [--anchor-gap:6px] [--anchor-offset:-4px] [--anchor-padding:10px]"
+                    className="min-w-(--button-width) rounded-lg bg-white p-1 shadow-lg ring-1 ring-slate-200 [--anchor-gap:6px] [--anchor-offset:-4px] [--anchor-padding:10px]"
                   >
                     {tiers.map((tier) => (
                       <MenuItem key={tier.slug}>
@@ -305,7 +305,7 @@ function PricingTable({
                           data-selected={
                             tier === selectedTier ? true : undefined
                           }
-                          className="group flex items-center gap-2 rounded-md px-2 py-1 text-white data-focus:bg-white/10"
+                          className="group flex items-center gap-2 rounded-md px-2 py-1 text-slate-900 data-focus:bg-slate-100"
                         >
                           {tier.name}
                           <CheckIcon className="hidden size-4 group-data-selected:block" />
@@ -315,7 +315,7 @@ function PricingTable({
                   </MenuItems>
                 </Menu>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center">
-                  <ChevronUpDownIcon className="size-4 fill-white" />
+                  <ChevronUpDownIcon className="size-4 fill-slate-900" />
                 </div>
               </div>
             </td>
@@ -330,7 +330,7 @@ function PricingTable({
                   colSpan={4}
                   className="px-0 pt-10 pb-0 group-first-of-type:pt-5"
                 >
-                  <div className="-mx-4 rounded-lg bg-slate-700 px-4 py-3 text-sm/6 font-semibold text-white">
+                  <div className="-mx-4 rounded-lg bg-slate-100 px-4 py-3 text-sm/6 font-semibold text-slate-900">
                     {section}
                   </div>
                 </th>
@@ -340,11 +340,11 @@ function PricingTable({
                 .map(({ name }) => (
                   <tr
                     key={name}
-                    className="border-b border-slate-700 last:border-none"
+                    className="border-b border-slate-200 last:border-none"
                   >
                     <th
                       scope="row"
-                      className="px-0 py-4 text-sm/6 font-normal text-gray-400"
+                      className="px-0 py-4 text-sm/6 font-normal text-slate-600"
                     >
                       {name}
                     </th>
@@ -377,7 +377,7 @@ function PricingTable({
                               </span>
                             </>
                           ) : (
-                            <div className="text-sm/6 text-white">{value}</div>
+                            <div className="text-sm/6 text-slate-900">{value}</div>
                           )}
                         </td>
                       )
@@ -406,7 +406,7 @@ function FeatureItem(
   return (
     <li
       data-disabled={disabled ? true : undefined}
-      className={`flex items-start gap-3 text-sm/6 ${featured ? 'text-gray-700' : 'text-gray-400'} data-disabled:text-gray-500`}
+      className={`flex items-start gap-3 text-sm/6 ${featured ? 'text-slate-700' : 'text-slate-600'} data-disabled:text-slate-400`}
     >
       <CheckIcon className={`h-5 w-5 flex-none ${featured ? 'text-rose-600' : 'text-gray-500'}`} aria-hidden="true" />
       {disabled && <span className="sr-only">Not included:</span>}
@@ -427,7 +427,7 @@ export function PricingPageClient({
 
   return (
     <div className="overflow-hidden">
-      <div className="relative isolate bg-slate-900">
+      <div className="relative isolate bg-white">
         {/* Radial gradient overlay for entire page */}
         <svg
           viewBox="0 0 1208 1024"
@@ -459,17 +459,17 @@ export function PricingPageClient({
               className="mt-16 flex justify-center"
             >
               <fieldset aria-label="Payment frequency">
-                <div className="grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-sm font-semibold ring-1 ring-white/10 bg-slate-900/50">
-                  <label className="group relative rounded-full px-4 py-2 has-checked:bg-rose-500">
+                <div className="grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-sm font-semibold ring-1 ring-slate-300 bg-slate-100">
+                  <label className="group relative rounded-full px-4 py-2 has-checked:bg-rose-600">
                     <input
                       defaultValue="monthly"
                       name="frequency"
                       type="radio"
                       className="absolute inset-0 appearance-none rounded-full"
                     />
-                    <span className="text-gray-300 group-has-checked:text-white">Monthly</span>
+                    <span className="text-slate-600 group-has-checked:text-white">Monthly</span>
                   </label>
-                  <label className="group relative rounded-full px-4 py-2 has-checked:bg-rose-500">
+                  <label className="group relative rounded-full px-4 py-2 has-checked:bg-rose-600">
                     <input
                       defaultValue="annually"
                       defaultChecked
@@ -477,7 +477,7 @@ export function PricingPageClient({
                       type="radio"
                       className="absolute inset-0 appearance-none rounded-full"
                     />
-                    <span className="text-gray-300 group-has-checked:text-white">Annually</span>
+                    <span className="text-slate-600 group-has-checked:text-white">Annually</span>
                   </label>
                 </div>
               </fieldset>

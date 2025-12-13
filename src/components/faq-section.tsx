@@ -38,11 +38,11 @@ export function FAQSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.5 }}
-            className="text-4xl font-semibold tracking-tight text-white sm:text-5xl"
+            className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl"
           >
             Frequently asked questions
           </motion.h2>
-          <dl className="mt-16 divide-y divide-white/10">
+          <dl className="mt-16 divide-y divide-slate-200">
             {faqs.map((faq, index) => (
               <Disclosure key={faq.question} as="div" className="py-6 first:pt-0 last:pb-0">
                 {({ open }) => (
@@ -53,7 +53,7 @@ export function FAQSection() {
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                   >
                     <dt>
-                      <DisclosureButton className="group flex w-full items-start justify-between text-left text-white">
+                      <DisclosureButton className="group flex w-full items-start justify-between text-left text-slate-900">
                         <span className="text-base/7 font-semibold">{faq.question}</span>
                         <span className="ml-6 flex h-7 items-center">
                           <PlusSmallIcon aria-hidden="true" className="size-6 group-data-open:hidden" />
@@ -72,7 +72,7 @@ export function FAQSection() {
                             className="overflow-hidden"
                           >
                             <div className="pr-12">
-                              <p className="text-base/7 text-gray-400">{faq.answer}</p>
+                              <p className="text-base/7 text-slate-600">{faq.answer}</p>
                             </div>
                           </motion.div>
                         </DisclosurePanel>
