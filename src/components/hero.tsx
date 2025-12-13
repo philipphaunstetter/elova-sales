@@ -1,9 +1,9 @@
 'use client'
 
-import { Button } from '@/components/button'
 import { Container } from '@/components/container'
 import { HeroBadge } from '@/components/hero-badge'
 import { Navbar } from '@/components/navbar'
+import { WaitlistForm } from '@/components/waitlist-form'
 import { motion } from 'framer-motion'
 
 export function Hero() {
@@ -39,18 +39,22 @@ export function Hero() {
             your critical automations. Built for IT Ops, Agencies, and AI
             Engineers.
           </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+            className="mt-4 max-w-2xl text-base text-slate-600"
+          >
+            Join our early access program and be the first to shape the future of n8n observability.
+            We are currently rolling out invites in batches.
+          </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row sm:items-center"
+            className="mt-12"
           >
-            <Button href="/early-access">
-              Get Early Access
-            </Button>
-            <Button variant="secondary" href="https://docs.elova.dev" target="_blank">
-              Read the Docs
-            </Button>
+            <WaitlistForm />
           </motion.div>
         </div>
       </Container>
