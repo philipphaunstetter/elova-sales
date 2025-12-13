@@ -227,7 +227,7 @@ function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
           <span className={`rounded-full px-3 py-1 text-xs font-semibold ${
             isPro
               ? 'bg-green-100 text-green-700 ring-1 ring-green-200'
-              : 'bg-green-500/20 text-green-300 ring-1 ring-green-500/50'
+              : 'bg-green-100 text-green-700 ring-1 ring-green-200'
           }`}>
             Save 17%
           </span>
@@ -446,22 +446,22 @@ export function PricingPageClient({
             >
               <fieldset aria-label="Payment frequency">
                 <div className="grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-sm font-semibold ring-1 ring-slate-300 bg-slate-100">
-                  <label className="group relative rounded-full px-4 py-2 has-checked:bg-rose-600">
+                  <label className="group relative cursor-pointer rounded-full px-4 py-2 has-checked:bg-rose-600">
                     <input
                       defaultValue="monthly"
                       name="frequency"
                       type="radio"
-                      className="absolute inset-0 appearance-none rounded-full"
+                      className="absolute inset-0 appearance-none rounded-full cursor-pointer"
                     />
                     <span className="text-slate-600 group-has-checked:text-white">Monthly</span>
                   </label>
-                  <label className="group relative rounded-full px-4 py-2 has-checked:bg-rose-600">
+                  <label className="group relative cursor-pointer rounded-full px-4 py-2 has-checked:bg-rose-600">
                     <input
                       defaultValue="annually"
                       defaultChecked
                       name="frequency"
                       type="radio"
-                      className="absolute inset-0 appearance-none rounded-full"
+                      className="absolute inset-0 appearance-none rounded-full cursor-pointer"
                     />
                     <span className="text-slate-600 group-has-checked:text-white">Annually</span>
                   </label>
