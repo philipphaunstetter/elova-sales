@@ -31,7 +31,7 @@ function DesktopNav() {
       ))}
       <Link
         href="/early-access"
-        className="flex items-center px-4 py-2 text-base font-medium text-white bg-rose-600 rounded-full data-hover:bg-rose-700 transition-colors shadow-md"
+        className="flex items-center px-4 py-2 text-base font-medium text-white bg-rose-600 rounded-full data-hover:bg-rose-700 transition-colors"
       >
         Get Early Access
       </Link>
@@ -95,7 +95,7 @@ function MobileNav() {
                 >
                   <Link
                     href="/early-access"
-                    className="block w-full text-center px-4 py-2 text-base font-medium text-white bg-rose-600 rounded-full shadow-md data-hover:bg-rose-700"
+                    className="block w-full text-center px-4 py-2 text-base font-medium text-white bg-rose-600 rounded-full data-hover:bg-rose-700"
                   >
                     Get Early Access
                   </Link>
@@ -118,7 +118,7 @@ import { NavbarReveal } from './navbar-reveal'
 export function Navbar() {
   return (
     <NavbarReveal>
-      <Disclosure as="header" className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 w-full">
+      <Disclosure as="header" className="sticky top-0 z-50 bg-white/80 backdrop-blur-md w-full">
         <Container>
           <div className="relative flex justify-between py-4">
             <div className="relative flex gap-6">
