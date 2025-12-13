@@ -12,19 +12,16 @@ import { Logo } from './logo'
 
 const links = [
   { href: '/pricing', label: 'Pricing' },
-  { href: 'https://docs.elova.dev', label: 'Docs', target: '_blank' },
 ]
 
 function DesktopNav() {
   return (
     <nav className="relative hidden lg:flex lg:items-center lg:gap-2">
-      {links.map(({ href, label, target }) => (
+      {links.map(({ href, label }) => (
         <div key={href} className="relative flex">
           <Link
             href={href}
-            target={target}
-            className="flex items-center px-4 py-3 text-base font-medium text-slate-700 bg-blend-multiply data-hover:underline data-hover:underline-offset-4"
-          >
+            className="flex items-center px-4 py-3 text-base font-medium text-slate-700 bg-blend-multiply data-hover:underline data-hover:underline-offset-4">
             {label}
           </Link>
         </div>
@@ -64,7 +61,7 @@ function MobileNav() {
               className="relative overflow-hidden"
             >
               <div className="flex flex-col gap-6 px-6 py-4">
-                {links.map(({ href, label, target }, linkIndex) => (
+                {links.map(({ href, label }, linkIndex) => (
                   <motion.div
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -77,7 +74,6 @@ function MobileNav() {
                   >
                     <Link
                       href={href}
-                      target={target}
                       className="block w-full text-center text-base font-medium text-slate-700"
                     >
                       {label}
