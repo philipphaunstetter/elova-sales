@@ -227,7 +227,7 @@ function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
           <span className={`rounded-full px-3 py-1 text-xs font-semibold ${
             isPro
               ? 'bg-green-100 text-green-700 ring-1 ring-green-200'
-              : 'bg-green-500/20 text-green-300 ring-1 ring-green-500/50'
+              : 'bg-green-100 text-green-700 ring-1 ring-green-200'
           }`}>
             Save 17%
           </span>
