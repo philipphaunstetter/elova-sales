@@ -45,23 +45,7 @@ function SitemapLink(props: React.ComponentPropsWithoutRef<typeof Link>) {
 }
 
 function Sitemap() {
-  return (
-    <>
-      <div>
-        <SitemapHeading>Support</SitemapHeading>
-        <SitemapLinks>
-          <SitemapLink href="https://discord.gg/9v9v9v9v9v" target="_blank">Discord</SitemapLink>
-        </SitemapLinks>
-      </div>
-      <div>
-        <SitemapHeading>Legal</SitemapHeading>
-        <SitemapLinks>
-          <SitemapLink href="#">Privacy policy</SitemapLink>
-          <SitemapLink href="/imprint">Imprint</SitemapLink>
-        </SitemapLinks>
-      </div>
-    </>
-  )
+  return null
 }
 
 function SocialIconX(props: React.ComponentPropsWithoutRef<'svg'>) {
@@ -125,8 +109,10 @@ function SocialLinks() {
 
 function Copyright() {
   return (
-    <div className="text-sm/6 text-slate-500">
-      &copy; {new Date().getFullYear()} Elova
+    <div className="flex items-center gap-6 text-sm/6 text-slate-500">
+      <span>&copy; {new Date().getFullYear()} Elova</span>
+      <Link href="#" className="hover:text-slate-700">Privacy Policy</Link>
+      <Link href="/imprint" className="hover:text-slate-700">Imprint</Link>
     </div>
   )
 }
