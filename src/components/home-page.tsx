@@ -1,9 +1,11 @@
 'use client'
 
+import React from 'react'
 import {
   BuildingOffice2Icon,
   CommandLineIcon,
   CpuChipIcon,
+  CheckIcon,
 } from '@heroicons/react/24/outline'
 import { BentoCard } from '@/components/bento-card'
 import { Footer } from '@/components/footer'
@@ -13,6 +15,8 @@ import { Screenshot } from '@/components/screenshot'
 import { ScrollToTop } from '@/components/scroll-to-top'
 import { Heading, Subheading } from '@/components/text'
 import { Container } from '@/components/container'
+import { WaitlistForm } from '@/components/waitlist-form'
+import { FAQSection } from '@/components/faq-section'
 import { motion } from 'framer-motion'
 
 function ScreenshotSection() {
@@ -175,6 +179,189 @@ function UseCasesSection() {
   )
 }
 
+function PricingSection() {
+  const [isAnnual, setIsAnnual] = React.useState(true)
+
+  const tiers = [
+    {
+      name: 'Starter',
+      slug: 'starter',
+      description: 'For solo developers and hobbyists.',
+      priceMonthly: 12,
+      priceAnnually: 120,
+      highlights: [
+        '1 n8n Instance',
+        '7-day Data Retention',
+        'Visual Flowchart Debugging',
+        'AI Cost Monitoring',
+      ],
+    },
+    {
+      name: 'Pro',
+      slug: 'pro',
+      description: 'For production workflows and small teams.',
+      priceMonthly: 39,
+      priceAnnually: 390,
+      featured: true,
+      highlights: [
+        'Everything from Community',
+        '5 n8n Instances',
+        '30-day Data Retention',
+        'Email & Slack Alerts',
+        '5 Team Members',
+      ],
+    },
+    {
+      name: 'Business',
+      slug: 'business',
+      description: 'For agencies and scaling companies.',
+      priceMonthly: 199,
+      priceAnnually: 1990,
+      highlights: [
+        'Everything from Pro',
+        '50 n8n Instances',
+        'Unlimited Data Retention',
+        '20 Team Members',
+        'Priority Support',
+      ],
+    },
+  ]
+
+  return (
+    <div id="pricing" className="scroll-mt-8 overflow-hidden bg-white py-24 sm:py-32">
+      <Container>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.5 }}
+          className="text-center"
+        >
+          <Subheading>Pricing</Subheading>
+          <Heading as="h2" className="mt-2">
+            Pricing that grows with your automations
+          </Heading>
+          <p className="mt-6 mx-auto max-w-2xl text-lg text-slate-600">
+            Start for free with our Community edition. Upgrade when you need more history, alerts, and team collaboration.
+          </p>
+          <fieldset aria-label="Payment frequency" className="mt-8 flex justify-center">
+            <div className="grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-sm font-semibold ring-1 ring-slate-300 bg-slate-100">
+              <label className="group relative cursor-pointer rounded-full px-4 py-2 has-[:checked]:bg-rose-600">
+                <input
+                  className="absolute inset-0 appearance-none rounded-full cursor-pointer"
+                  type="radio"
+                  value="monthly"
+                  name="frequency"
+                  checked={!isAnnual}
+                  onChange={() => setIsAnnual(false)}
+                />
+                <span className="text-slate-600 group-has-[:checked]:text-white">Monthly</span>
+              </label>
+              <label className="group relative cursor-pointer rounded-full px-4 py-2 has-[:checked]:bg-rose-600">
+                <input
+                  className="absolute inset-0 appearance-none rounded-full cursor-pointer"
+                  type="radio"
+                  value="annually"
+                  name="frequency"
+                  checked={isAnnual}
+                  onChange={() => setIsAnnual(true)}
+                />
+                <span className="text-slate-600 group-has-[:checked]:text-white">Annually</span>
+              </label>
+            </div>
+          </fieldset>
+        </motion.div>
+
+        <div className="mt-16 grid grid-cols-1 gap-y-8 lg:grid-cols-3">
+          {tiers.map((tier, index) => (
+            <motion.div
+              key={tier.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className={`relative ${tier.featured ? 'z-10' : 'z-0'}`}
+            >
+              <div
+                className={`flex h-full flex-col rounded-2xl p-8 ring-1 ${
+                  tier.featured
+                    ? 'bg-white shadow-2xl ring-2 ring-rose-500 lg:scale-105'
+                    : 'bg-white shadow-md ring-slate-200'
+                }`}
+              >
+                {tier.featured && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
+                    <div className="rounded-full bg-gradient-to-r from-rose-600 to-rose-500 px-4 py-1 text-xs font-semibold text-white shadow-lg">
+                      Most Popular
+                    </div>
+                  </div>
+                )}
+                <h3
+                  className={`text-lg font-semibold ${
+                    tier.featured ? 'text-rose-600' : 'text-slate-900'
+                  }`}
+                >
+                  {tier.name}
+                </h3>
+                <p className="mt-2 text-sm text-slate-600">{tier.description}</p>
+                <div className="mt-6">
+                  <div className="flex items-baseline gap-x-2">
+                    <span className="text-5xl font-semibold tracking-tight text-slate-900">
+                      €{isAnnual ? tier.priceAnnually : tier.priceMonthly}
+                    </span>
+                    <span className="text-sm font-semibold text-slate-600">
+                      EUR/{isAnnual ? 'year' : 'month'}
+                    </span>
+                    {isAnnual && (
+                      <span className="rounded-full px-3 py-1 text-xs font-semibold bg-green-100 text-green-700 ring-1 ring-green-200">
+                        Save 17%
+                      </span>
+                    )}
+                  </div>
+                </div>
+                <button
+                  className={`mt-6 w-full rounded-full px-4 py-3 text-sm font-semibold transition-colors ${
+                    tier.featured
+                      ? 'bg-rose-600 text-white hover:bg-rose-700'
+                      : 'bg-white text-slate-900 border border-slate-300 hover:bg-slate-50'
+                  }`}
+                >
+                  Get Early Access
+                </button>
+                <ul className="mt-8 space-y-3 flex-1">
+                  {tier.highlights.map((highlight) => (
+                    <li key={highlight} className="flex items-start gap-3 text-sm text-slate-600">
+                      <CheckIcon
+                        className={`h-5 w-5 flex-none ${
+                          tier.featured ? 'text-rose-600' : 'text-gray-500'
+                        }`}
+                      />
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-12 text-center text-base text-slate-600"
+        >
+          Need an Enterprise plan with custom limits?{' '}
+          <a href="mailto:contact@elova.io" className="text-rose-600 hover:text-rose-700 font-semibold">
+            Contact us
+          </a>
+          .
+        </motion.p>
+      </Container>
+    </div>
+  )
+}
+
 export function HomePage() {
   return (
     <div className="overflow-hidden">
@@ -185,6 +372,8 @@ export function HomePage() {
           <ScreenshotSection />
           <FeaturesSection />
           <UseCasesSection />
+          <PricingSection />
+          <FAQSection />
         </div>
       </main>
       <Footer />

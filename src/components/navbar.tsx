@@ -37,14 +37,7 @@ function DesktopNav() {
 }
 
 function MobileNavButton() {
-  return (
-    <DisclosureButton
-      className="flex size-12 items-center justify-center self-center rounded-lg data-hover:bg-slate-100 lg:hidden"
-      aria-label="Open main menu"
-    >
-      <Bars2Icon className="size-6 text-slate-700" />
-    </DisclosureButton>
-  )
+  return null
 }
 
 function MobileNav() {
@@ -124,8 +117,6 @@ export function Navbar() {
                 </Link>
               </div>
             </div>
-            <DesktopNav />
-            <MobileNavButton />
           </div>
         </Container>
         <MobileNav />
