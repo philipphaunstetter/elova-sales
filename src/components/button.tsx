@@ -11,9 +11,9 @@ const variants = {
   ),
   secondary: clsx(
     'relative inline-flex items-center justify-center px-4 py-[calc(--spacing(2)-1px)]',
-    'rounded-full border border-transparent bg-white/10 shadow-md',
-    'text-base font-medium whitespace-nowrap text-white',
-    'data-disabled:bg-white/10 data-disabled:opacity-40 data-hover:bg-white/20',
+    'rounded-full border border-slate-300 bg-white shadow-md',
+    'text-base font-medium whitespace-nowrap text-slate-700',
+    'data-disabled:bg-white data-disabled:opacity-40 data-hover:bg-slate-50',
   ),
   outline: clsx(
     'inline-flex items-center justify-center px-2 py-[calc(--spacing(1.5)-1px)]',

@@ -9,11 +9,11 @@ function CallToAction() {
     <div className="relative pt-20 pb-16 text-center sm:py-24">
       <hgroup>
         <Subheading>Get started</Subheading>
-        <p className="mt-6 text-3xl font-medium tracking-tight text-white sm:text-5xl">
+        <p className="mt-6 text-3xl font-medium tracking-tight text-slate-900 sm:text-5xl">
           Ready to monitor your workflows?
         </p>
       </hgroup>
-      <p className="mx-auto mt-6 max-w-xs text-sm/6 text-slate-400">
+      <p className="mx-auto mt-6 max-w-xs text-sm/6 text-slate-600">
         Self-hosted workflow observability for n8n. Deploy in minutes with Docker.
       </p>
       <div className="mt-6">
@@ -26,7 +26,7 @@ function CallToAction() {
 }
 
 function SitemapHeading({ children }: { children: React.ReactNode }) {
-  return <h3 className="text-sm/6 font-medium text-slate-400">{children}</h3>
+  return <h3 className="text-sm/6 font-medium text-slate-600">{children}</h3>
 }
 
 function SitemapLinks({ children }: { children: React.ReactNode }) {
@@ -38,7 +38,7 @@ function SitemapLink(props: React.ComponentPropsWithoutRef<typeof Link>) {
     <li>
       <Link
         {...props}
-        className="font-medium text-white data-hover:text-slate-300"
+        className="font-medium text-slate-700 data-hover:text-slate-900"
       />
     </li>
   )
@@ -115,7 +115,7 @@ function SocialLinks() {
         href="https://facebook.com"
         target="_blank"
         aria-label="Visit us on Facebook"
-        className="text-slate-400 data-hover:text-slate-300"
+        className="text-slate-500 data-hover:text-slate-700"
       >
         <SocialIconFacebook className="size-4" />
       </Link>
@@ -123,7 +123,7 @@ function SocialLinks() {
         href="https://x.com"
         target="_blank"
         aria-label="Visit us on X"
-        className="text-slate-400 data-hover:text-slate-300"
+        className="text-slate-500 data-hover:text-slate-700"
       >
         <SocialIconX className="size-4" />
       </Link>
@@ -131,7 +131,7 @@ function SocialLinks() {
         href="https://www.linkedin.com/company/elova-n8n-monitoring/"
         target="_blank"
         aria-label="Visit us on LinkedIn"
-        className="text-slate-400 data-hover:text-slate-300"
+        className="text-slate-500 data-hover:text-slate-700"
       >
         <SocialIconLinkedIn className="size-4" />
       </Link>
@@ -141,7 +141,7 @@ function SocialLinks() {
 
 function Copyright() {
   return (
-    <div className="text-sm/6 text-slate-400">
+    <div className="text-sm/6 text-slate-500">
       &copy; {new Date().getFullYear()} Elova
     </div>
   )
@@ -149,11 +149,11 @@ function Copyright() {
 
 export function Footer({ hideCta = false }: { hideCta?: boolean }) {
   return (
-    <footer className="relative bg-slate-900">
+    <footer className="relative bg-slate-50 border-t border-slate-200">
       <Container>
         {!hideCta && <CallToAction />}
         <div className="pb-16">
-          <div className="grid grid-cols-2 gap-y-10 pb-6 lg:grid-cols-6 lg:gap-8 border-t border-white/10 pt-16">
+          <div className="grid grid-cols-2 gap-y-10 pb-6 lg:grid-cols-6 lg:gap-8 border-t border-slate-200 pt-16">
             <div className="col-span-2 flex">
               <div className="pt-6 lg:pb-6">
                 <Logo className="h-9" />
@@ -163,7 +163,7 @@ export function Footer({ hideCta = false }: { hideCta?: boolean }) {
               <Sitemap />
             </div>
           </div>
-          <div className="flex justify-between border-t border-white/10 py-6">
+          <div className="flex justify-between border-t border-slate-200 py-6">
             <div>
               <div className="py-3">
                 <Copyright />

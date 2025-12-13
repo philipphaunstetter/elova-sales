@@ -31,7 +31,7 @@ export function BentoCard({
       className={clsx(
         className,
         'group relative flex flex-col overflow-hidden rounded-lg',
-        'bg-slate-800 shadow-xs ring-1 ring-white/10',
+        'bg-white shadow-xs ring-1 ring-slate-200',
       )}
     >
       <div className="relative h-80 shrink-0 overflow-hidden">
@@ -43,20 +43,20 @@ export function BentoCard({
           {graphic}
         </motion.div>
         {fade.includes('top') && (
-          <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-slate-800 to-50%" />
+          <div className="pointer-events-none absolute inset-0 bg-linear-to-b from-white to-50%" />
         )}
         {fade.includes('bottom') && (
-          <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-slate-800 to-50%" />
+          <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-white to-50%" />
         )}
       </div>
       <div className="relative p-10">
         <Subheading as="h3" dark={true}>
           {eyebrow}
         </Subheading>
-        <p className="mt-1 text-2xl/8 font-medium tracking-tight text-white">
+        <p className="mt-1 text-2xl/8 font-medium tracking-tight text-slate-900">
           {title}
         </p>
-        <p className="mt-2 max-w-[600px] text-sm/6 text-gray-400">
+        <p className="mt-2 max-w-[600px] text-sm/6 text-slate-600">
           {description}
         </p>
       </div>

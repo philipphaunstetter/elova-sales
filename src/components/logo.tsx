@@ -6,7 +6,7 @@ export function Logo({ className }: { className?: string }) {
   return (
     <div className={clsx(className, 'flex items-center gap-2')}>
       <Mark className="h-8 w-8 text-rose-500" />
-      <span className="font-display text-xl font-bold tracking-tight text-white">
+      <span className="font-display text-xl font-bold tracking-tight text-slate-900">
         Elova
       </span>
     </div>

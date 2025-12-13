@@ -125,13 +125,13 @@ function UseCasesSection() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <div className="flex h-full flex-col rounded-2xl bg-slate-800 p-8 ring-1 ring-white/10 transition-colors hover:bg-slate-800/80">
+          <div className="flex h-full flex-col rounded-2xl bg-white p-8 ring-1 ring-slate-200 transition-colors hover:bg-slate-50">
             <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-rose-500/10">
-              <BuildingOffice2Icon className="h-6 w-6 text-rose-500" />
+              <BuildingOffice2Icon className="h-6 w-6 text-rose-600" />
             </div>
-            <div className="mb-2 text-sm font-semibold text-rose-400">Agencies</div>
-            <h4 className="text-lg font-semibold text-white">Multi-Tenant Command Center</h4>
-            <p className="mt-4 flex-auto text-sm leading-6 text-gray-400">
+            <div className="mb-2 text-sm font-semibold text-rose-600">Agencies</div>
+            <h4 className="text-lg font-semibold text-slate-900">Multi-Tenant Command Center</h4>
+            <p className="mt-4 flex-auto text-sm leading-6 text-slate-600">
               Monitor health across disjointed client instances. Catch webhook failures and API rate limits before your client sends an angry email.
             </p>
           </div>
@@ -142,13 +142,13 @@ function UseCasesSection() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <div className="flex h-full flex-col rounded-2xl bg-slate-800 p-8 ring-1 ring-white/10 transition-colors hover:bg-slate-800/80">
+          <div className="flex h-full flex-col rounded-2xl bg-white p-8 ring-1 ring-slate-200 transition-colors hover:bg-slate-50">
             <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-rose-500/10">
-              <CpuChipIcon className="h-6 w-6 text-rose-500" />
+              <CpuChipIcon className="h-6 w-6 text-rose-600" />
             </div>
-            <div className="mb-2 text-sm font-semibold text-rose-400">AI Engineers</div>
-            <h4 className="text-lg font-semibold text-white">AI Cost & Latency Control</h4>
-            <p className="mt-4 flex-auto text-sm leading-6 text-gray-400">
+            <div className="mb-2 text-sm font-semibold text-rose-600">AI Engineers</div>
+            <h4 className="text-lg font-semibold text-slate-900">AI Cost & Latency Control</h4>
+            <p className="mt-4 flex-auto text-sm leading-6 text-slate-600">
               Stop flying blind on API costs. Track token usage, execution time, and failure rates across your autonomous agents and LLM chains.
             </p>
           </div>
@@ -159,13 +159,13 @@ function UseCasesSection() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <div className="flex h-full flex-col rounded-2xl bg-slate-800 p-8 ring-1 ring-white/10 transition-colors hover:bg-slate-800/80">
+          <div className="flex h-full flex-col rounded-2xl bg-white p-8 ring-1 ring-slate-200 transition-colors hover:bg-slate-50">
             <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-rose-500/10">
-              <CommandLineIcon className="h-6 w-6 text-rose-500" />
+              <CommandLineIcon className="h-6 w-6 text-rose-600" />
             </div>
-            <div className="mb-2 text-sm font-semibold text-rose-400">IT Operations</div>
-            <h4 className="text-lg font-semibold text-white">Visual Root Cause Analysis</h4>
-            <p className="mt-4 flex-auto text-sm leading-6 text-gray-400">
+            <div className="mb-2 text-sm font-semibold text-rose-600">IT Operations</div>
+            <h4 className="text-lg font-semibold text-slate-900">Visual Root Cause Analysis</h4>
+            <p className="mt-4 flex-auto text-sm leading-6 text-slate-600">
               When a critical sync fails at 3 AM, don&apos;t parse JSON logs. See exactly which node broke, the data payload it received, and the error output instantly.
             </p>
           </div>

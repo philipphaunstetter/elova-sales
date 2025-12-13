@@ -40,7 +40,7 @@ export function WaitlistForm() {
         required
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="min-w-0 flex-auto rounded-full border-0 bg-white/10 px-5 py-3 text-base text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-rose-500 sm:leading-6 placeholder:text-gray-400"
+        className="min-w-0 flex-auto rounded-full border-0 bg-white px-5 py-3 text-base text-slate-900 shadow-sm ring-1 ring-inset ring-slate-300 focus:ring-2 focus:ring-inset focus:ring-rose-600 sm:leading-6 placeholder:text-slate-400"
         placeholder="Enter your email"
         disabled={status === 'loading' || status === 'success'}
       />
