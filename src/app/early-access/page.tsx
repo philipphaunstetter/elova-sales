@@ -13,20 +13,6 @@ export default function EarlyAccess() {
   return (
     <div className="overflow-hidden bg-white">
       <div className="relative isolate">
-         {/* Radial gradient overlay for entire page */}
-         <svg
-          viewBox="0 0 1208 1024"
-          aria-hidden="true"
-          className="absolute top-1/2 left-1/2 -z-10 h-[64rem] -translate-x-1/2 -translate-y-1/2 blur-3xl opacity-20"
-        >
-          <ellipse cx={604} cy={512} rx={604} ry={512} fill="url(#early-access-gradient)" />
-          <defs>
-            <radialGradient id="early-access-gradient">
-              <stop stopColor="#f43f5e" />
-              <stop offset={1} stopColor="#be123c" />
-            </radialGradient>
-          </defs>
-        </svg>
         
         <div className="min-h-screen flex flex-col">
           <Navbar />
