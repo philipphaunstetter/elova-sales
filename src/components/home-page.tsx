@@ -4,6 +4,7 @@ import {
   BuildingOffice2Icon,
   CommandLineIcon,
   CpuChipIcon,
+  CheckIcon,
 } from '@heroicons/react/24/outline'
 import { BentoCard } from '@/components/bento-card'
 import { Footer } from '@/components/footer'
@@ -13,7 +14,57 @@ import { Screenshot } from '@/components/screenshot'
 import { ScrollToTop } from '@/components/scroll-to-top'
 import { Heading, Subheading } from '@/components/text'
 import { Container } from '@/components/container'
+import { WaitlistForm } from '@/components/waitlist-form'
+import { FAQSection } from '@/components/faq-section'
 import { motion } from 'framer-motion'
+
+function EarlyAccessSection() {
+  return (
+    <div id="early-access" className="scroll-mt-8 overflow-hidden bg-slate-50 py-24 sm:py-32">
+      <Container>
+        <div className="mx-auto max-w-2xl text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.5 }}
+          >
+            <Heading as="h2">
+              Join the <span className="text-rose-600">Early Access</span> Program
+            </Heading>
+            <p className="mt-6 text-lg leading-8 text-slate-600">
+              Be the first to get access to Elova and shape the future of n8n observability.
+              We are currently rolling out invites in batches.
+            </p>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-8 flex justify-center"
+          >
+            <WaitlistForm />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-100px' }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mt-16"
+          >
+            <Screenshot
+              width={1216}
+              height={768}
+              src="/screenshots/app.png"
+              className="w-full rounded-lg shadow-2xl"
+            />
+          </motion.div>
+        </div>
+      </Container>
+    </div>
+  )
+}
 
 function ScreenshotSection() {
   return (
@@ -175,16 +226,135 @@ function UseCasesSection() {
   )
 }
 
+function PricingSection() {
+  const tiers = [
+    {
+      name: 'Starter',
+      description: 'For solo developers and hobbyists.',
+      priceMonthly: 12,
+      highlights: [
+        '1 n8n Instance',
+        '7-day Data Retention',
+        'Visual Flowchart Debugging',
+        'AI Cost Monitoring',
+      ],
+    },
+    {
+      name: 'Pro',
+      description: 'For production workflows and small teams.',
+      priceMonthly: 39,
+      featured: true,
+      highlights: [
+        '5 n8n Instances',
+        '30-day Data Retention',
+        'Email & Slack Alerts',
+        '5 Team Members',
+      ],
+    },
+    {
+      name: 'Business',
+      description: 'For agencies and scaling companies.',
+      priceMonthly: 199,
+      highlights: [
+        '50 n8n Instances',
+        'Unlimited Data Retention',
+        '20 Team Members',
+        'Priority Support',
+      ],
+    },
+  ]
+
+  return (
+    <div id="pricing" className="scroll-mt-8 overflow-hidden bg-white py-24 sm:py-32">
+      <Container>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-100px' }}
+          transition={{ duration: 0.5 }}
+          className="text-center"
+        >
+          <Subheading>Pricing</Subheading>
+          <Heading as="h2" className="mt-2">
+            Pricing that grows with your automations
+          </Heading>
+          <p className="mt-6 mx-auto max-w-2xl text-lg text-slate-600">
+            Start for free with our Community edition. Upgrade when you need more history, alerts, and team collaboration.
+          </p>
+        </motion.div>
+
+        <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
+          {tiers.map((tier, index) => (
+            <motion.div
+              key={tier.name}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-100px' }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="relative"
+            >
+              <div
+                className={`flex h-full flex-col rounded-2xl p-8 ring-1 ${
+                  tier.featured
+                    ? 'bg-white shadow-2xl ring-2 ring-rose-500 lg:scale-105'
+                    : 'bg-white shadow-md ring-slate-200'
+                }`}
+              >
+                {tier.featured && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2">
+                    <div className="rounded-full bg-gradient-to-r from-rose-600 to-rose-500 px-4 py-1 text-xs font-semibold text-white shadow-lg">
+                      Most Popular
+                    </div>
+                  </div>
+                )}
+                <h3
+                  className={`text-lg font-semibold ${
+                    tier.featured ? 'text-rose-600' : 'text-slate-900'
+                  }`}
+                >
+                  {tier.name}
+                </h3>
+                <p className="mt-2 text-sm text-slate-600">{tier.description}</p>
+                <div className="mt-6 flex items-baseline gap-x-2">
+                  <span className="text-5xl font-semibold tracking-tight text-slate-900">
+                    €{tier.priceMonthly}
+                  </span>
+                  <span className="text-sm font-semibold text-slate-600">EUR/month</span>
+                </div>
+                <ul className="mt-8 space-y-3 flex-1">
+                  {tier.highlights.map((highlight) => (
+                    <li key={highlight} className="flex items-start gap-3 text-sm text-slate-600">
+                      <CheckIcon
+                        className={`h-5 w-5 flex-none ${
+                          tier.featured ? 'text-rose-600' : 'text-gray-500'
+                        }`}
+                      />
+                      {highlight}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </Container>
+    </div>
+  )
+}
+
 export function HomePage() {
   return (
     <div className="overflow-hidden">
       <ScrollToTop />
       <Hero />
       <main>
+        <EarlyAccessSection />
         <div className="py-32">
           <ScreenshotSection />
           <FeaturesSection />
           <UseCasesSection />
+          <PricingSection />
+          <FAQSection />
         </div>
       </main>
       <Footer />

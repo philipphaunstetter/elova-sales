@@ -45,11 +45,8 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="mt-12 flex flex-col gap-x-6 gap-y-4 sm:flex-row sm:items-center"
           >
-            <Button href="/early-access">
+            <Button href="#early-access">
               Get Early Access
-            </Button>
-            <Button variant="secondary" href="https://docs.elova.dev" target="_blank">
-              Read the Docs
             </Button>
           </motion.div>
         </div>

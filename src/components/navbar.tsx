@@ -10,27 +10,11 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { Link } from './link'
 import { Logo } from './logo'
 
-const links = [
-  { href: '/pricing', label: 'Pricing' },
-  { href: 'https://docs.elova.dev', label: 'Docs', target: '_blank' },
-]
-
 function DesktopNav() {
   return (
     <nav className="relative hidden lg:flex lg:items-center lg:gap-2">
-      {links.map(({ href, label, target }) => (
-        <div key={href} className="relative flex">
-          <Link
-            href={href}
-            target={target}
-            className="flex items-center px-4 py-3 text-base font-medium text-slate-700 bg-blend-multiply data-hover:underline data-hover:underline-offset-4"
-          >
-            {label}
-          </Link>
-        </div>
-      ))}
       <Link
-        href="/early-access"
+        href="#early-access"
         className="flex items-center px-4 py-2 text-base font-medium text-white bg-rose-600 rounded-full data-hover:bg-rose-700 transition-colors"
       >
         Get Early Access
@@ -64,37 +48,16 @@ function MobileNav() {
               className="relative overflow-hidden"
             >
               <div className="flex flex-col gap-6 px-6 py-4">
-                {links.map(({ href, label, target }, linkIndex) => (
-                  <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{
-                      duration: 0.3,
-                      ease: 'easeInOut',
-                      delay: linkIndex * 0.1,
-                    }}
-                    key={href}
-                  >
-                    <Link
-                      href={href}
-                      target={target}
-                      className="block w-full text-center text-base font-medium text-slate-700"
-                    >
-                      {label}
-                    </Link>
-                  </motion.div>
-                ))}
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{
                     duration: 0.3,
                     ease: 'easeInOut',
-                    delay: links.length * 0.1,
                   }}
                 >
                   <Link
-                    href="/early-access"
+                    href="#early-access"
                     className="block w-full text-center px-4 py-2 text-base font-medium text-white bg-rose-600 rounded-full data-hover:bg-rose-700"
                   >
                     Get Early Access
