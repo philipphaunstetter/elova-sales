@@ -43,9 +43,6 @@ jobs:
       
       - name: Build project
         run: npm run build
-        env:
-          NEXT_PUBLIC_SANITY_PROJECT_ID: ${{ secrets.NEXT_PUBLIC_SANITY_PROJECT_ID }}
-          NEXT_PUBLIC_SANITY_DATASET: ${{ secrets.NEXT_PUBLIC_SANITY_DATASET }}
 
   deploy-preview:
     name: Deploy Preview
