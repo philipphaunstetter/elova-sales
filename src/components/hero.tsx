@@ -10,14 +10,6 @@ import { motion } from 'framer-motion'
 export function Hero() {
   return (
     <div className="relative">
-      <div className="absolute inset-x-0 top-0 -z-10 flex justify-center overflow-hidden pointer-events-none">
-        <Screenshot
-          width={1216}
-          height={768}
-          src="/screenshots/app.png"
-          className="w-[80rem] opacity-20 dark:opacity-10"
-        />
-      </div>
       <Navbar />
       <Container className="relative">
         <div className="flex flex-col items-center text-center pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
@@ -64,6 +56,13 @@ export function Hero() {
           >
             <WaitlistForm />
           </motion.div>
+          <div className="mt-16 flow-root sm:mt-24">
+            <Screenshot
+              width={1216}
+              height={768}
+              src="/screenshots/app.png"
+            />
+          </div>
         </div>
       </Container>
     </div>
