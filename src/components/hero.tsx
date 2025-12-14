@@ -3,6 +3,7 @@
 import { Container } from '@/components/container'
 import { HeroBadge } from '@/components/hero-badge'
 import { Navbar } from '@/components/navbar'
+import { Screenshot } from '@/components/screenshot'
 import { WaitlistForm } from '@/components/waitlist-form'
 import { motion } from 'framer-motion'
 
@@ -55,6 +56,13 @@ export function Hero() {
           >
             <WaitlistForm />
           </motion.div>
+          <div className="mt-16 flow-root sm:mt-24">
+            <Screenshot
+              width={1216}
+              height={768}
+              src="/screenshots/app.png"
+            />
+          </div>
         </div>
       </Container>
     </div>
