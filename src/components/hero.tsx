@@ -11,12 +11,12 @@ export function Hero() {
     <div className="relative">
       <Navbar />
       <Container className="relative">
-        <div className="pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
+        <div className="flex flex-col items-center text-center pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-8 flex"
+            className="mb-8 flex justify-center"
           >
             <HeroBadge />
           </motion.div>
