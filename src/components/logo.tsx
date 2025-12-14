@@ -6,7 +6,7 @@ export function Logo({ className }: { className?: string }) {
   return (
     <div className={clsx(className, 'flex items-center gap-2')}>
       <Mark className="h-8 w-8 text-rose-500" />
-      <span className="font-display text-xl font-bold tracking-tight text-slate-900">
+      <span className="font-display text-xl font-bold text-slate-900">
         elova
       </span>
     </div>
@@ -19,7 +19,7 @@ export function Mark({ className }: { className?: string }) {
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
-      strokeWidth="1.5"
+      strokeWidth="1"
       stroke="currentColor"
       className={className}
     >
