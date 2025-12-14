@@ -1,5 +1,21 @@
 import '@/styles/tailwind.css'
 import type { Metadata } from 'next'
+import localFont from 'next/font/local'
+
+const matchFont = localFont({
+  src: [
+    {
+      path: '../fonts/MatchVariableWEB-Upright.woff2',
+      style: 'normal',
+    },
+    {
+      path: '../fonts/MatchVariableWEB-Italic.woff2',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-match',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: {
@@ -14,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={matchFont.variable}>
       <body className="bg-white text-slate-900 antialiased">
         {children}
       </body>
