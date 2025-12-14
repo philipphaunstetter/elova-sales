@@ -28,7 +28,7 @@ export function WaitlistForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mt-10 flex w-full max-w-2xl flex-col gap-y-4 sm:flex-row sm:gap-x-4">
+    <form onSubmit={handleSubmit} className="mt-10 flex w-full max-w-2xl flex-col gap-y-4 mx-auto sm:flex-row sm:gap-x-4">
       <label htmlFor="email-address" className="sr-only">
         Email address
       </label>
