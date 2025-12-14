@@ -44,8 +44,8 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.25 }}
             className="mt-4 max-w-2xl text-base text-slate-600"
           >
-            Join our early access program and be the first to shape the future of n8n observability.
-            We are currently rolling out invites in batches.
+            Join the waitlist for our Early Access program starting Q2 2026. Be the
+            first to shape the future of n8n observability.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
