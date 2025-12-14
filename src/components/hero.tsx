@@ -58,9 +58,9 @@ export function Hero() {
           </motion.div>
           <div className="mt-16 flow-root sm:mt-24">
             <Screenshot
-              width={1216}
-              height={768}
-              src="/screenshots/app.png"
+              width={6999}
+              height={3866}
+              src="/screenshots/dashboard-screenshot.png"
             />
           </div>
         </div>
