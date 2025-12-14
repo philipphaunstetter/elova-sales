@@ -26,8 +26,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-display text-4xl font-semibold tracking-tight text-balance text-slate-900 sm:text-6xl md:text-7xl"
           >
-            The Missing Observability Layer for{' '}
-            <span className="text-rose-600">n8n</span>
+            Stop flying blind with your automations.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -61,3 +60,5 @@ export function Hero() {
     </div>
   )
 }
+The Missing Observability Layer for{' '}
+            <span className="text-rose-600">n8n</span>
