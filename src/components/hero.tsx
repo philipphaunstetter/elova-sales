@@ -3,12 +3,21 @@
 import { Container } from '@/components/container'
 import { HeroBadge } from '@/components/hero-badge'
 import { Navbar } from '@/components/navbar'
+import { Screenshot } from '@/components/screenshot'
 import { WaitlistForm } from '@/components/waitlist-form'
 import { motion } from 'framer-motion'
 
 export function Hero() {
   return (
     <div className="relative">
+      <div className="absolute inset-x-0 top-0 -z-10 flex justify-center overflow-hidden pointer-events-none">
+        <Screenshot
+          width={1216}
+          height={768}
+          src="/screenshots/app.png"
+          className="w-[80rem] opacity-20 dark:opacity-10"
+        />
+      </div>
       <Navbar />
       <Container className="relative">
         <div className="pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
