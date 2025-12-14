@@ -110,7 +110,7 @@ function SocialLinks() {
 function Copyright() {
   return (
     <div className="flex items-center gap-6 text-sm/6 text-slate-500">
-      <span>&copy; {new Date().getFullYear()} Elova</span>
+      <span>&copy; {new Date().getFullYear()} elova</span>
       <Link href="#" className="hover:text-slate-700">Privacy Policy</Link>
       <Link href="/imprint" className="hover:text-slate-700">Imprint</Link>
     </div>

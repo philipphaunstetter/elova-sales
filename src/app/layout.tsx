@@ -19,8 +19,8 @@ const matchFont = localFont({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Elova',
-    default: 'Elova - Workflow Observability for n8n',
+    template: '%s - elova',
+    default: 'elova - Workflow Observability for n8n',
   },
 }
 
