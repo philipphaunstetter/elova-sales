@@ -11,7 +11,6 @@ import { BentoCard } from '@/components/bento-card'
 import { Footer } from '@/components/footer'
 import { Hero } from '@/components/hero'
 import { Map } from '@/components/map'
-import { Screenshot } from '@/components/screenshot'
 import { ScrollToTop } from '@/components/scroll-to-top'
 import { Heading, Subheading } from '@/components/text'
 import { Container } from '@/components/container'
@@ -33,12 +32,6 @@ function ScreenshotSection() {
             The Missing Observability Layer for n8n.
           </Heading>
         </motion.div>
-        <Screenshot
-          width={1216}
-          height={768}
-          src="/screenshots/app.png"
-          className="mt-16 h-144 sm:h-auto sm:w-304"
-        />
       </Container>
     </div>
   )
