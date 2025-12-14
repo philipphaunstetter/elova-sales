@@ -18,25 +18,6 @@ import { WaitlistForm } from '@/components/waitlist-form'
 import { FAQSection } from '@/components/faq-section'
 import { motion } from 'framer-motion'
 
-function ScreenshotSection() {
-  return (
-    <div className="overflow-hidden">
-      <Container className="pb-24">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.5 }}
-        >
-          <Heading as="h2" className="max-w-7xl">
-            The Missing Observability Layer for n8n.
-          </Heading>
-        </motion.div>
-      </Container>
-    </div>
-  )
-}
-
 function FeaturesSection() {
   return (
     <Container id="features">
@@ -313,7 +294,7 @@ function PricingSection() {
                   </div>
                 </div>
                 <button
-                  className={`mt-6 w-full rounded-full px-4 py-3 text-sm font-semibold transition-colors ${
+                  className={`mt-6 w-full rounded-full px-4 py-3 text-sm font-semibold transition-colors cursor-pointer ${
                     tier.featured
                       ? 'bg-rose-600 text-white hover:bg-rose-700'
                       : 'bg-white text-slate-900 border border-slate-300 hover:bg-slate-50'
@@ -362,7 +343,6 @@ export function HomePage() {
       <Hero />
       <main>
         <div className="py-32">
-          <ScreenshotSection />
           <FeaturesSection />
           <UseCasesSection />
           <PricingSection />
