@@ -60,7 +60,7 @@ export function Hero() {
             <Screenshot
               width={1216}
               height={768}
-              src="/screenshots/app.png"
+              src="/screenshots/dashboard-screenshot.png"
             />
           </div>
         </div>
