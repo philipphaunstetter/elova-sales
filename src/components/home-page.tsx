@@ -30,7 +30,7 @@ function ScreenshotSection() {
           transition={{ duration: 0.5 }}
         >
           <Heading as="h2" className="max-w-7xl">
-            The Missing Observability Layer for n8n
+            The Missing Observability Layer for n8n.
           </Heading>
         </motion.div>
         <Screenshot

@@ -60,3 +60,5 @@ export function Hero() {
     </div>
   )
 }
+The Missing Observability Layer for{' '}
+            <span className="text-rose-600">n8n</span>
