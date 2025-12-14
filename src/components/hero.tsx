@@ -35,9 +35,8 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-8 max-w-2xl text-lg font-medium text-slate-600 sm:text-xl/8"
           >
-            Self-hosted monitoring, visual debugging, and reliability checks for
-            your critical automations. Built for IT Ops, Agencies, and AI
-            Engineers.
+            The Missing Observability Layer for n8n. Self-hosted monitoring, visual
+            debugging, and reliability checks for your critical automations.
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -45,8 +44,9 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.25 }}
             className="mt-4 max-w-2xl text-base text-slate-600"
           >
-            Join our early access program and be the first to shape the future of n8n observability.
-            We are currently rolling out invites in batches.
+            Join the waitlist for our Early Access program starting Q2 2026.{' '}
+            <br className="hidden sm:inline" />
+            Be the first to shape the future of n8n observability.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
