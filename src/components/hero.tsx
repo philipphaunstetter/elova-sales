@@ -52,15 +52,15 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-12"
+            className="mt-12 w-full"
           >
             <WaitlistForm />
           </motion.div>
           <div className="mt-16 flow-root sm:mt-24">
             <Screenshot
-              width={1216}
-              height={768}
-              src="/screenshots/app.png"
+              width={6999}
+              height={3866}
+              src="/screenshots/dashboard-screenshot.png"
             />
           </div>
         </div>
