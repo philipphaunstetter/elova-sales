@@ -9,7 +9,7 @@ const faqs = [
   {
     question: 'How does the monitoring work?',
     answer:
-      'Elova connects to your n8n instance via API. It fetches workflow execution data and presents it in a unified dashboard. We do not store your workflow data in the cloud; everything stays on your self-hosted instance.',
+      'elova connects to your n8n instance via API. It fetches workflow execution data and presents it in a unified dashboard. We do not store your workflow data in the cloud; everything stays on your self-hosted instance.',
   },
   {
     question: 'Is the Community version really free?',
@@ -19,7 +19,7 @@ const faqs = [
   {
     question: 'Can I host it myself?',
     answer:
-      'Absolutely. Elova is designed to be self-hosted using Docker. You can run it on the same server as your n8n instance or a separate one.',
+      'Absolutely. elova is designed to be self-hosted using Docker. You can run it on the same server as your n8n instance or a separate one.',
   },
   {
     question: 'Do you support Zapier or Make.com?',
