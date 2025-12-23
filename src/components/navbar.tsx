@@ -11,7 +11,7 @@ import { Link } from './link'
 import { Logo } from './logo'
 
 const links = [
-  { href: '/pricing', label: 'Pricing' },
+  // Navigation items will be added here
 ]
 
 function DesktopNav() {
@@ -26,12 +26,6 @@ function DesktopNav() {
           </Link>
         </div>
       ))}
-      <Link
-        href="/early-access"
-        className="flex items-center px-4 py-2 text-base font-medium text-white bg-rose-600 rounded-full data-hover:bg-rose-700 transition-colors"
-      >
-        Get Early Access
-      </Link>
     </nav>
   )
 }
@@ -73,22 +67,6 @@ function MobileNav() {
                     </Link>
                   </motion.div>
                 ))}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{
-                    duration: 0.3,
-                    ease: 'easeInOut',
-                    delay: links.length * 0.1,
-                  }}
-                >
-                  <Link
-                    href="/early-access"
-                    className="block w-full text-center px-4 py-2 text-base font-medium text-white bg-rose-600 rounded-full data-hover:bg-rose-700"
-                  >
-                    Get Early Access
-                  </Link>
-                </motion.div>
               </div>
               <div className="absolute left-1/2 top-0 w-screen -translate-x-1/2">
                 <div className="absolute inset-x-0 top-0 border-t border-slate-200" />
