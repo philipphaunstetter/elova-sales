@@ -108,17 +108,12 @@ export function Navbar() {
   return (
     <NavbarReveal>
       <Disclosure as="header" className="sticky top-0 z-50 bg-white/80 backdrop-blur-md w-full">
-        <Container>
-          <div className="relative flex justify-between py-4">
-            <div className="relative flex gap-6">
-              <div className="flex items-center">
-                <Link href="/" title="Home">
-                  <Logo className="h-9" />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </Container>
+        <div className="flex items-center justify-between px-16 py-8">
+          <Link href="/" title="Home">
+            <Logo className="h-[42px] w-[100px]" />
+          </Link>
+          <DesktopNav />
+        </div>
         <MobileNav />
       </Disclosure>
     </NavbarReveal>
