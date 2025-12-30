@@ -10,7 +10,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { Link } from './link'
 import { Logo } from './logo'
 
-const links = [
+const links: Array<{ href: string; label: string }> = [
   // Navigation items will be added here
 ]
 
