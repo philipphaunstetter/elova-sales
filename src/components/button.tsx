@@ -7,7 +7,7 @@ const variants = {
   primary: clsx(
     'inline-flex items-center justify-center gap-2 px-4 py-2',
     'rounded-full border border-transparent bg-[#6b21a8]',
-    'text-sm font-medium whitespace-nowrap text-[#f8fafc]',
+    'text-base font-medium whitespace-nowrap text-[#f8fafc]',
     'transition-all duration-200',
     'data-disabled:opacity-40 data-hover:bg-[#581c87]',
   ),
