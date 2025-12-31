@@ -36,10 +36,10 @@ export function ScrollToTop() {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.5 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-rose-500 shadow-lg transition-colors hover:bg-rose-600 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2"
+          className="fixed bottom-8 right-8 z-50 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full bg-purple-700 shadow-lg transition-colors hover:bg-purple-800 focus:outline-none focus:ring-2 focus:ring-purple-700 focus:ring-offset-2"
           aria-label="Scroll to top"
         >
-          <ChevronUpIcon className="h-6 w-6 text-slate-900" strokeWidth={2.5} />
+          <ChevronUpIcon className="h-6 w-6 text-white" strokeWidth={2.5} />
         </motion.button>
       )}
     </AnimatePresence>
