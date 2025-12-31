@@ -267,10 +267,10 @@ function PricingSection() {
                     </div>
                   </div>
                 )}
-                <h3 className="text-lg font-semibold text-slate-900">
+                <h3 className="text-xl font-medium text-slate-900">
                   {tier.name}
                 </h3>
-                <p className="mt-2 text-sm text-slate-600">{tier.description}</p>
+                <p className="mt-2 text-base leading-6 text-slate-600">{tier.description}</p>
                 <div className="mt-6">
                   <div className="flex items-baseline gap-x-2">
                     <span className="text-5xl font-semibold tracking-tight text-slate-900">
