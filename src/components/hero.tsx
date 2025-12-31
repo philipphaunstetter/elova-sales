@@ -11,8 +11,8 @@ export function Hero() {
   return (
     <div className="relative">
       <Navbar />
-      <Container className="relative">
-        <div className="flex flex-col items-center text-center pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
+      <div className="px-4 py-6">
+        <div className="flex flex-col items-center text-center max-w-md mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ export function Hero() {
             </div>
           </motion.div>
         </div>
-      </Container>
+      </div>
     </div>
   )
 }
