@@ -15,7 +15,7 @@ export function BentoCard({
 }: {
   dark?: boolean
   className?: string
-  eyebrow: React.ReactNode
+  eyebrow?: React.ReactNode
   title: React.ReactNode
   description: React.ReactNode
   graphic: React.ReactNode
@@ -50,10 +50,12 @@ export function BentoCard({
         )}
       </div>
       <div className="relative p-10">
-        <Subheading as="h3" dark={true}>
-          {eyebrow}
-        </Subheading>
-        <p className="mt-1 text-2xl/8 font-medium tracking-tight text-slate-900">
+        {eyebrow && (
+          <Subheading as="h3" dark={true}>
+            {eyebrow}
+          </Subheading>
+        )}
+        <p className={clsx("text-2xl/8 font-medium tracking-tight text-slate-900", eyebrow ? "mt-1" : "")}>
           {title}
         </p>
         <p className="mt-2 max-w-[600px] text-sm/6 text-slate-600">

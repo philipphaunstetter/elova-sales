@@ -42,7 +42,6 @@ function FeaturesSection() {
         className="mt-10 grid grid-cols-1 gap-4 sm:mt-16 lg:grid-cols-2"
       >
         <BentoCard
-          eyebrow="Peace of Mind"
           title="Automatic History"
           description="Forget about creating backup workflows to Google Drive. Elova keeps a full history of your executions and configurations out of the box."
           graphic={
@@ -52,7 +51,6 @@ function FeaturesSection() {
           className="lg:rounded-tl-4xl"
         />
         <BentoCard
-          eyebrow="Deep Visibility"
           title="Inspect Executions Instantly"
           description="View detailed execution logs, input/output data, and error stack traces without needing to log in to your production n8n instance."
           graphic={
@@ -62,7 +60,6 @@ function FeaturesSection() {
           className="lg:rounded-tr-4xl"
         />
         <BentoCard
-          eyebrow="AI Observability"
           title="Cost & Token Tracking"
           description="Monitor AI agent costs per execution. Track token usage across LLM providers to prevent billing surprises."
           graphic={
@@ -71,7 +68,6 @@ function FeaturesSection() {
           className="lg:rounded-bl-4xl"
         />
         <BentoCard
-          eyebrow="Privacy First"
           title="Self-Hosted & Secure"
           description="Deploy with Docker on your own infrastructure. Keep sensitive workflow data and credentials under your control."
           graphic={<Map />}
