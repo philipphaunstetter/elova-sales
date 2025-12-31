@@ -104,8 +104,8 @@ function UseCasesSection() {
             <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-[#f3e8ff]">
               <BuildingOffice2Icon className="h-6 w-6 text-[#6b21a8]" />
             </div>
-            <div className="mb-2 text-sm font-semibold text-[#6b21a8]">Agencies</div>
-            <h4 className="text-lg font-semibold text-slate-900">Multi-Tenant Command Center</h4>
+            <div className="mb-2 text-sm font-normal text-[#6b21a8]">Agencies</div>
+            <h4 className="text-lg font-medium text-slate-900">Multi-Tenant Command Center</h4>
             <p className="mt-4 flex-auto text-base leading-6 text-slate-600">
               Monitor health across disjointed client instances. Catch webhook failures and API rate limits before your client sends an angry email.
             </p>
@@ -121,8 +121,8 @@ function UseCasesSection() {
             <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-[#f3e8ff]">
               <CpuChipIcon className="h-6 w-6 text-[#6b21a8]" />
             </div>
-            <div className="mb-2 text-sm font-semibold text-[#6b21a8]">AI Engineers</div>
-            <h4 className="text-lg font-semibold text-slate-900">AI Cost & Latency Control</h4>
+            <div className="mb-2 text-sm font-normal text-[#6b21a8]">AI Engineers</div>
+            <h4 className="text-lg font-medium text-slate-900">AI Cost & Latency Control</h4>
             <p className="mt-4 flex-auto text-base leading-6 text-slate-600">
               Stop flying blind on API costs. Track token usage, execution time, and failure rates across your autonomous agents and LLM chains.
             </p>
@@ -138,8 +138,8 @@ function UseCasesSection() {
             <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-[#f3e8ff]">
               <CommandLineIcon className="h-6 w-6 text-[#6b21a8]" />
             </div>
-            <div className="mb-2 text-sm font-semibold text-[#6b21a8]">IT Operations</div>
-            <h4 className="text-lg font-semibold text-slate-900">Visual Root Cause Analysis</h4>
+            <div className="mb-2 text-sm font-normal text-[#6b21a8]">IT Operations</div>
+            <h4 className="text-lg font-medium text-slate-900">Visual Root Cause Analysis</h4>
             <p className="mt-4 flex-auto text-base leading-6 text-slate-600">
               When a critical sync fails at 3 AM, don&apos;t parse JSON logs. See exactly which node broke, the data payload it received, and the error output instantly.
             </p>
@@ -216,7 +216,7 @@ function PricingSection() {
             Start for free with our Community edition. Upgrade when you need more history, alerts, and team collaboration.
           </p>
           <fieldset aria-label="Payment frequency" className="mt-8 flex justify-center">
-            <div className="grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-sm font-semibold ring-1 ring-[#cbd5e1] bg-[#f1f5f9]">
+            <div className="grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-sm font-normal ring-1 ring-[#cbd5e1] bg-[#f1f5f9]">
               <label className="group relative cursor-pointer rounded-full px-4 py-2 has-[:checked]:bg-[#6b21a8]">
                 <input
                   className="absolute inset-0 appearance-none rounded-full cursor-pointer"
@@ -262,7 +262,7 @@ function PricingSection() {
               >
                 {tier.featured && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
-                    <div className="rounded-full bg-[#f3e8ff] px-4 py-1 text-xs font-semibold text-[#6b21a8] shadow-lg">
+                    <div className="rounded-full bg-[#f3e8ff] px-4 py-1 text-xs font-medium text-[#6b21a8] shadow-lg">
                       Most Popular
                     </div>
                   </div>
@@ -273,14 +273,14 @@ function PricingSection() {
                 <p className="mt-2 text-base leading-6 text-slate-600">{tier.description}</p>
                 <div className="mt-6">
                   <div className="flex items-baseline gap-x-2">
-                    <span className="text-5xl font-semibold tracking-tight text-slate-900">
+                    <span className="text-5xl font-medium tracking-tight text-slate-900">
                       €{isAnnual ? tier.priceAnnually : tier.priceMonthly}
                     </span>
-                    <span className="text-sm font-semibold text-slate-600">
+                    <span className="text-sm font-normal text-slate-600">
                       EUR/{isAnnual ? 'year' : 'month'}
                     </span>
                     {isAnnual && (
-                      <span className="rounded-full px-3 py-1 text-xs font-semibold bg-green-100 text-green-700 ring-1 ring-green-200">
+                      <span className="rounded-full px-3 py-1 text-xs font-normal bg-green-100 text-green-700 ring-1 ring-green-200">
                         Save 17%
                       </span>
                     )}
@@ -315,7 +315,7 @@ function PricingSection() {
           className="mt-12 text-center text-base text-slate-600"
         >
           Need an Enterprise plan with custom limits?{' '}
-          <a href="mailto:contact@elova.io" className="text-slate-900 hover:text-slate-700 font-semibold underline underline-offset-2">
+          <a href="mailto:contact@elova.io" className="text-slate-900 hover:text-slate-700 font-normal underline underline-offset-2">
             Contact us
           </a>
           .

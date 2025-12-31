@@ -54,7 +54,7 @@ export function FAQSection() {
                   >
                     <dt>
                       <DisclosureButton className="group flex w-full items-start justify-between text-left text-slate-900 cursor-pointer">
-                        <span className="text-base/7 font-semibold">{faq.question}</span>
+                        <span className="text-base/7 font-normal">{faq.question}</span>
                         <span className="ml-6 flex h-7 items-center">
                           <PlusSmallIcon aria-hidden="true" className="size-6 group-data-open:hidden" />
                           <MinusSmallIcon aria-hidden="true" className="size-6 group-not-data-open:hidden" />
