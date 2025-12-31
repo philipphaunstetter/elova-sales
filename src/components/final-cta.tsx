@@ -20,11 +20,11 @@ export function FinalCTA() {
           <h2 className="text-3xl font-medium tracking-tight text-[#6b21a8] sm:text-4xl">
             Ready to monitor your workflows?
           </h2>
-          <p className="mt-4 text-base leading-7 text-gray-900">
+          <p className="mt-4 text-base leading-6 text-gray-900">
             Self-hosted workflow observability for n8n. Deploy in minutes with Docker.
           </p>
           <div className="mt-8">
-            <Button>Get Early Access</Button>
+            <Button className="text-sm">Get Early Access</Button>
           </div>
         </motion.div>
       </div>

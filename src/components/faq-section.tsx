@@ -72,7 +72,7 @@ export function FAQSection() {
                             className="overflow-hidden"
                           >
                             <div className="pr-12">
-                              <p className="text-base/7 text-slate-600">{faq.answer}</p>
+                              <p className="text-sm leading-[21px] text-slate-600">{faq.answer}</p>
                             </div>
                           </motion.div>
                         </DisclosurePanel>
