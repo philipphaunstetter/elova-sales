@@ -297,7 +297,7 @@ function PricingSection() {
                 </button>
                 <ul className="mt-8 space-y-3 flex-1">
                   {tier.highlights.map((highlight) => (
-                    <li key={highlight} className="flex items-start gap-3 text-sm text-slate-600">
+                    <li key={highlight} className="flex items-start gap-3 text-base leading-[21px] text-slate-600">
                       <CheckIcon className="h-5 w-5 flex-none text-slate-600" />
                       {highlight}
                     </li>
