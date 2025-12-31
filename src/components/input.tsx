@@ -29,7 +29,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             type={inputType}
             className={clsx(
               'w-full rounded-full border border-[#e2e8f0] bg-white px-3 py-[7.5px]',
-              'text-sm text-slate-900 placeholder:text-[#64748b]',
+              'text-base text-slate-900 placeholder:text-[#64748b]',
               'transition-colors duration-200',
               'focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900/10',
               'disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-500',
