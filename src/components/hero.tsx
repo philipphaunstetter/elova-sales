@@ -17,7 +17,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-8 flex justify-center"
+            className="mb-6 flex justify-center"
           >
             <HeroBadge />
           </motion.div>
@@ -25,34 +25,23 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-display text-4xl font-medium tracking-tight text-balance text-black sm:text-5xl"
+            className="font-display text-[48px] font-medium leading-[48px] tracking-[-0.5px] text-black"
           >
-            Stop flying blind. Start monitoring.
+            Stop flying blind.<br />Start monitoring.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-8 max-w-2xl text-lg font-medium text-slate-600 sm:text-xl/8"
+            className="mt-8 max-w-md text-base leading-6 text-black"
           >
-            The Missing Observability Layer for n8n. Self-hosted monitoring, visual
-            debugging, and reliability checks for your critical automations.
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.25 }}
-            className="mt-4 max-w-2xl text-base text-slate-600"
-          >
-            Join the waitlist for our Early Access program starting Q2 2026.{' '}
-            <br className="hidden sm:inline" />
-            Be the first to shape the future of n8n observability.
+            Elova brings enterprise-grade observability to n8n. Correlate workflow performance with server health and endpoint uptime in one unified, visual interface.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-12 w-full"
+            className="mt-8 w-full max-w-md"
           >
             <WaitlistForm />
           </motion.div>

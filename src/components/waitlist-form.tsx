@@ -30,29 +30,32 @@ export function WaitlistForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mt-10 w-full max-w-md mx-auto space-y-4">
-      <Input
-        id="email-address"
-        name="email"
-        type="email"
-        autoComplete="email"
-        required
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="admin@example.com"
-        disabled={status === 'loading' || status === 'success'}
-        error={status === 'error' ? error : undefined}
-        className="w-full"
-      />
-      <Button 
-        type="submit" 
-        variant="dark"
-        disabled={status === 'loading' || status === 'success'}
-        showArrow
-        className="w-full justify-center"
-      >
-        {status === 'loading' ? 'Joining...' : status === 'success' ? 'You\'re on the list!' : 'Get Early Access'}
-      </Button>
+    <form onSubmit={handleSubmit} className="w-full space-y-2">
+      <div className="space-y-2">
+        <Input
+          id="email-address"
+          name="email"
+          type="email"
+          autoComplete="email"
+          required
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Enter your email"
+          disabled={status === 'loading' || status === 'success'}
+          error={status === 'error' ? error : undefined}
+          className="w-full"
+        />
+        <Button 
+          type="submit" 
+          disabled={status === 'loading' || status === 'success'}
+          className="w-full justify-center"
+        >
+          {status === 'loading' ? 'Joining...' : status === 'success' ? 'You\'re on the list!' : 'Join Waiting List'}
+        </Button>
+      </div>
+      <p className="text-xs text-center text-[#64748b] leading-4">
+        * Your data is stored locally & double opt-in is required.
+      </p>
     </form>
   )
 }
