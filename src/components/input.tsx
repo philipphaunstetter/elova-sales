@@ -20,7 +20,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
     return (
       <div className="w-full">
         {label && (
-          <label className="mb-2 block text-sm font-medium text-slate-900">
+          <label className="mb-2 block text-sm font-medium text-[#020617]">
             {label}
           </label>
         )}
@@ -28,10 +28,10 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           <input
             type={inputType}
             className={clsx(
-              'w-full rounded-lg border border-slate-300 bg-white px-4 py-3',
-              'text-sm text-slate-900 placeholder:text-slate-400',
+              'w-full rounded-full border border-[#e2e8f0] bg-white px-3 py-[7.5px]',
+              'text-sm text-slate-900 placeholder:text-[#64748b]',
               'transition-colors duration-200',
-              'focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20',
+              'focus:border-slate-900 focus:outline-none focus:ring-1 focus:ring-slate-900/10',
               'disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-500',
               error && 'border-red-500 focus:border-red-500 focus:ring-red-500/20',
               isPassword && 'pr-12',

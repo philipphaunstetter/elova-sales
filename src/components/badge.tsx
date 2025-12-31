@@ -2,14 +2,14 @@ import { clsx } from 'clsx'
 import { cva, type VariantProps } from 'class-variance-authority'
 
 const badgeVariants = cva(
-  'inline-flex items-center rounded-full px-3 py-1 text-xs font-medium transition-colors',
+  'inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold transition-colors',
   {
     variants: {
       variant: {
-        active: 'bg-green-100 text-green-700',
-        inactive: 'bg-slate-100 text-slate-600',
-        label: 'bg-slate-900 text-white',
-        primary: 'bg-purple-100 text-purple-700',
+        active: 'bg-[#dcfce7] text-[#166534]',
+        inactive: 'bg-[#f1f5f9] text-[#64748b]',
+        label: 'bg-[#0f172a] text-[#f8fafc]',
+        primary: 'bg-[#f3e8ff] text-[#581c87]',
       },
     },
     defaultVariants: {

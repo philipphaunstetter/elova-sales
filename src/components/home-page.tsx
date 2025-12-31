@@ -103,11 +103,11 @@ function UseCasesSection() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <div className="flex h-full flex-col rounded-2xl bg-white p-8 ring-1 ring-slate-200 transition-colors hover:bg-slate-50">
-            <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-rose-500/10">
-              <BuildingOffice2Icon className="h-6 w-6 text-rose-600" />
+          <div className="flex h-full flex-col rounded-2xl bg-white p-8 ring-1 ring-[#e2e8f0] transition-colors hover:bg-slate-50">
+            <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-slate-900/5">
+              <BuildingOffice2Icon className="h-6 w-6 text-slate-900" />
             </div>
-            <div className="mb-2 text-sm font-semibold text-rose-600">Agencies</div>
+            <div className="mb-2 text-sm font-semibold text-slate-900">Agencies</div>
             <h4 className="text-lg font-semibold text-slate-900">Multi-Tenant Command Center</h4>
             <p className="mt-4 flex-auto text-sm leading-6 text-slate-600">
               Monitor health across disjointed client instances. Catch webhook failures and API rate limits before your client sends an angry email.
@@ -120,11 +120,11 @@ function UseCasesSection() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <div className="flex h-full flex-col rounded-2xl bg-white p-8 ring-1 ring-slate-200 transition-colors hover:bg-slate-50">
-            <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-rose-500/10">
-              <CpuChipIcon className="h-6 w-6 text-rose-600" />
+          <div className="flex h-full flex-col rounded-2xl bg-white p-8 ring-1 ring-[#e2e8f0] transition-colors hover:bg-slate-50">
+            <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-slate-900/5">
+              <CpuChipIcon className="h-6 w-6 text-slate-900" />
             </div>
-            <div className="mb-2 text-sm font-semibold text-rose-600">AI Engineers</div>
+            <div className="mb-2 text-sm font-semibold text-slate-900">AI Engineers</div>
             <h4 className="text-lg font-semibold text-slate-900">AI Cost & Latency Control</h4>
             <p className="mt-4 flex-auto text-sm leading-6 text-slate-600">
               Stop flying blind on API costs. Track token usage, execution time, and failure rates across your autonomous agents and LLM chains.
@@ -137,11 +137,11 @@ function UseCasesSection() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.5, delay: 0.4 }}
         >
-          <div className="flex h-full flex-col rounded-2xl bg-white p-8 ring-1 ring-slate-200 transition-colors hover:bg-slate-50">
-            <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-rose-500/10">
-              <CommandLineIcon className="h-6 w-6 text-rose-600" />
+          <div className="flex h-full flex-col rounded-2xl bg-white p-8 ring-1 ring-[#e2e8f0] transition-colors hover:bg-slate-50">
+            <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-slate-900/5">
+              <CommandLineIcon className="h-6 w-6 text-slate-900" />
             </div>
-            <div className="mb-2 text-sm font-semibold text-rose-600">IT Operations</div>
+            <div className="mb-2 text-sm font-semibold text-slate-900">IT Operations</div>
             <h4 className="text-lg font-semibold text-slate-900">Visual Root Cause Analysis</h4>
             <p className="mt-4 flex-auto text-sm leading-6 text-slate-600">
               When a critical sync fails at 3 AM, don&apos;t parse JSON logs. See exactly which node broke, the data payload it received, and the error output instantly.
@@ -219,8 +219,8 @@ function PricingSection() {
             Start for free with our Community edition. Upgrade when you need more history, alerts, and team collaboration.
           </p>
           <fieldset aria-label="Payment frequency" className="mt-8 flex justify-center">
-            <div className="grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-sm font-semibold ring-1 ring-slate-300 bg-slate-100">
-              <label className="group relative cursor-pointer rounded-full px-4 py-2 has-[:checked]:bg-rose-600">
+            <div className="grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-sm font-semibold ring-1 ring-[#e2e8f0] bg-slate-50">
+              <label className="group relative cursor-pointer rounded-full px-4 py-2 has-[:checked]:bg-slate-900">
                 <input
                   className="absolute inset-0 appearance-none rounded-full cursor-pointer"
                   type="radio"
@@ -231,7 +231,7 @@ function PricingSection() {
                 />
                 <span className="text-slate-600 group-has-[:checked]:text-white">Monthly</span>
               </label>
-              <label className="group relative cursor-pointer rounded-full px-4 py-2 has-[:checked]:bg-rose-600">
+              <label className="group relative cursor-pointer rounded-full px-4 py-2 has-[:checked]:bg-slate-900">
                 <input
                   className="absolute inset-0 appearance-none rounded-full cursor-pointer"
                   type="radio"
@@ -259,22 +259,18 @@ function PricingSection() {
               <div
                 className={`flex h-full flex-col rounded-2xl p-8 ring-1 ${
                   tier.featured
-                    ? 'bg-white shadow-2xl ring-2 ring-rose-500 lg:scale-105'
-                    : 'bg-white shadow-md ring-slate-200'
+                    ? 'bg-white shadow-2xl ring-2 ring-slate-900 lg:scale-105'
+                    : 'bg-white shadow-md ring-[#e2e8f0]'
                 }`}
               >
                 {tier.featured && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
-                    <div className="rounded-full bg-gradient-to-r from-rose-600 to-rose-500 px-4 py-1 text-xs font-semibold text-white shadow-lg">
+                    <div className="rounded-full bg-slate-900 px-4 py-1 text-xs font-semibold text-white shadow-lg">
                       Most Popular
                     </div>
                   </div>
                 )}
-                <h3
-                  className={`text-lg font-semibold ${
-                    tier.featured ? 'text-rose-600' : 'text-slate-900'
-                  }`}
-                >
+                <h3 className="text-lg font-semibold text-slate-900">
                   {tier.name}
                 </h3>
                 <p className="mt-2 text-sm text-slate-600">{tier.description}</p>
@@ -296,8 +292,8 @@ function PricingSection() {
                 <button
                   className={`mt-6 w-full rounded-full px-4 py-3 text-sm font-semibold transition-colors cursor-pointer ${
                     tier.featured
-                      ? 'bg-rose-600 text-white hover:bg-rose-700'
-                      : 'bg-white text-slate-900 border border-slate-300 hover:bg-slate-50'
+                      ? 'bg-slate-900 text-white hover:bg-slate-800'
+                      : 'bg-white text-slate-900 border border-[#e2e8f0] hover:bg-slate-50'
                   }`}
                 >
                   Get Early Access
@@ -305,11 +301,7 @@ function PricingSection() {
                 <ul className="mt-8 space-y-3 flex-1">
                   {tier.highlights.map((highlight) => (
                     <li key={highlight} className="flex items-start gap-3 text-sm text-slate-600">
-                      <CheckIcon
-                        className={`h-5 w-5 flex-none ${
-                          tier.featured ? 'text-rose-600' : 'text-gray-500'
-                        }`}
-                      />
+                      <CheckIcon className="h-5 w-5 flex-none text-slate-600" />
                       {highlight}
                     </li>
                   ))}
@@ -326,7 +318,7 @@ function PricingSection() {
           className="mt-12 text-center text-base text-slate-600"
         >
           Need an Enterprise plan with custom limits?{' '}
-          <a href="mailto:contact@elova.io" className="text-rose-600 hover:text-rose-700 font-semibold">
+          <a href="mailto:contact@elova.io" className="text-slate-900 hover:text-slate-700 font-semibold underline underline-offset-2">
             Contact us
           </a>
           .

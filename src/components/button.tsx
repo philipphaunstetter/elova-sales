@@ -5,10 +5,11 @@ import { Link } from './link'
 
 const variants = {
   primary: clsx(
-    'inline-flex items-center justify-center px-4 py-[calc(--spacing(2)-1px)]',
-    'rounded-full border border-transparent bg-gradient-to-r from-[#6B01F3] to-[#502ADD]',
-    'text-base font-medium whitespace-nowrap text-white',
-    'data-disabled:opacity-40 data-hover:from-[#502ADD] data-hover:to-[#6B01F3]',
+    'inline-flex items-center justify-center gap-2 px-6 py-3',
+    'rounded-full border border-transparent bg-[#0f172a]',
+    'text-sm font-semibold whitespace-nowrap text-[#f8fafc]',
+    'transition-all duration-200',
+    'data-disabled:opacity-40 data-hover:bg-slate-800 data-hover:scale-[1.02]',
   ),
   dark: clsx(
     'inline-flex items-center justify-center gap-2 px-6 py-3',
