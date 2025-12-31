@@ -25,9 +25,11 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-display text-4xl font-semibold tracking-tight text-balance text-slate-900 sm:text-6xl md:text-7xl"
+            className="font-display text-4xl font-semibold tracking-tight text-balance sm:text-6xl md:text-7xl"
           >
-            Stop flying blind with your automations.
+            <span className="text-slate-900">Stop flying blind with your </span>
+            <span className="bg-gradient-to-r from-[#6B01F3] to-[#502ADD] bg-clip-text text-transparent">automations</span>
+            <span className="text-slate-900">.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

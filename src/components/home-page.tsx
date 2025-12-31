@@ -104,10 +104,10 @@ function UseCasesSection() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div className="flex h-full flex-col rounded-2xl bg-white p-8 ring-1 ring-[#e2e8f0] transition-colors hover:bg-slate-50">
-            <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-slate-900/5">
-              <BuildingOffice2Icon className="h-6 w-6 text-slate-900" />
+            <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-[#f3e8ff]">
+              <BuildingOffice2Icon className="h-6 w-6 text-[#6b21a8]" />
             </div>
-            <div className="mb-2 text-sm font-semibold text-slate-900">Agencies</div>
+            <div className="mb-2 text-sm font-semibold text-[#6b21a8]">Agencies</div>
             <h4 className="text-lg font-semibold text-slate-900">Multi-Tenant Command Center</h4>
             <p className="mt-4 flex-auto text-sm leading-6 text-slate-600">
               Monitor health across disjointed client instances. Catch webhook failures and API rate limits before your client sends an angry email.
@@ -121,10 +121,10 @@ function UseCasesSection() {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <div className="flex h-full flex-col rounded-2xl bg-white p-8 ring-1 ring-[#e2e8f0] transition-colors hover:bg-slate-50">
-            <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-slate-900/5">
-              <CpuChipIcon className="h-6 w-6 text-slate-900" />
+            <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-[#f3e8ff]">
+              <CpuChipIcon className="h-6 w-6 text-[#6b21a8]" />
             </div>
-            <div className="mb-2 text-sm font-semibold text-slate-900">AI Engineers</div>
+            <div className="mb-2 text-sm font-semibold text-[#6b21a8]">AI Engineers</div>
             <h4 className="text-lg font-semibold text-slate-900">AI Cost & Latency Control</h4>
             <p className="mt-4 flex-auto text-sm leading-6 text-slate-600">
               Stop flying blind on API costs. Track token usage, execution time, and failure rates across your autonomous agents and LLM chains.
@@ -138,10 +138,10 @@ function UseCasesSection() {
           transition={{ duration: 0.5, delay: 0.4 }}
         >
           <div className="flex h-full flex-col rounded-2xl bg-white p-8 ring-1 ring-[#e2e8f0] transition-colors hover:bg-slate-50">
-            <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-slate-900/5">
-              <CommandLineIcon className="h-6 w-6 text-slate-900" />
+            <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-[#f3e8ff]">
+              <CommandLineIcon className="h-6 w-6 text-[#6b21a8]" />
             </div>
-            <div className="mb-2 text-sm font-semibold text-slate-900">IT Operations</div>
+            <div className="mb-2 text-sm font-semibold text-[#6b21a8]">IT Operations</div>
             <h4 className="text-lg font-semibold text-slate-900">Visual Root Cause Analysis</h4>
             <p className="mt-4 flex-auto text-sm leading-6 text-slate-600">
               When a critical sync fails at 3 AM, don&apos;t parse JSON logs. See exactly which node broke, the data payload it received, and the error output instantly.
@@ -219,8 +219,8 @@ function PricingSection() {
             Start for free with our Community edition. Upgrade when you need more history, alerts, and team collaboration.
           </p>
           <fieldset aria-label="Payment frequency" className="mt-8 flex justify-center">
-            <div className="grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-sm font-semibold ring-1 ring-[#e2e8f0] bg-slate-50">
-              <label className="group relative cursor-pointer rounded-full px-4 py-2 has-[:checked]:bg-slate-900">
+            <div className="grid grid-cols-2 gap-x-1 rounded-full p-1 text-center text-sm font-semibold ring-1 ring-[#cbd5e1] bg-[#f1f5f9]">
+              <label className="group relative cursor-pointer rounded-full px-4 py-2 has-[:checked]:bg-[#6b21a8]">
                 <input
                   className="absolute inset-0 appearance-none rounded-full cursor-pointer"
                   type="radio"
@@ -231,7 +231,7 @@ function PricingSection() {
                 />
                 <span className="text-slate-600 group-has-[:checked]:text-white">Monthly</span>
               </label>
-              <label className="group relative cursor-pointer rounded-full px-4 py-2 has-[:checked]:bg-slate-900">
+              <label className="group relative cursor-pointer rounded-full px-4 py-2 has-[:checked]:bg-[#6b21a8]">
                 <input
                   className="absolute inset-0 appearance-none rounded-full cursor-pointer"
                   type="radio"
@@ -259,13 +259,13 @@ function PricingSection() {
               <div
                 className={`flex h-full flex-col rounded-2xl p-8 ring-1 ${
                   tier.featured
-                    ? 'bg-white shadow-2xl ring-2 ring-slate-900 lg:scale-105'
+                    ? 'bg-white shadow-2xl ring-2 ring-[#6b21a8] lg:scale-105'
                     : 'bg-white shadow-md ring-[#e2e8f0]'
                 }`}
               >
                 {tier.featured && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20">
-                    <div className="rounded-full bg-slate-900 px-4 py-1 text-xs font-semibold text-white shadow-lg">
+                    <div className="rounded-full bg-[#f3e8ff] px-4 py-1 text-xs font-semibold text-[#6b21a8] shadow-lg">
                       Most Popular
                     </div>
                   </div>
@@ -292,7 +292,7 @@ function PricingSection() {
                 <button
                   className={`mt-6 w-full rounded-full px-4 py-3 text-sm font-semibold transition-colors cursor-pointer ${
                     tier.featured
-                      ? 'bg-slate-900 text-white hover:bg-slate-800'
+                      ? 'bg-[#6b21a8] text-white hover:bg-[#581c87]'
                       : 'bg-white text-slate-900 border border-[#e2e8f0] hover:bg-slate-50'
                   }`}
                 >
