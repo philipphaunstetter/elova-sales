@@ -58,7 +58,7 @@ export function BentoCard({
         <p className={clsx("text-2xl/8 font-medium tracking-tight text-slate-900", eyebrow ? "mt-1" : "")}>
           {title}
         </p>
-        <p className="mt-2 max-w-[600px] text-sm/6 text-slate-600">
+        <p className="mt-2 max-w-[600px] text-base leading-6 text-slate-600">
           {description}
         </p>
       </div>
