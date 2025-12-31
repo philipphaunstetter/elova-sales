@@ -11,13 +11,13 @@ export function Hero() {
   return (
     <div className="relative">
       <Navbar />
-      <Container className="relative">
-        <div className="flex flex-col items-center text-center pt-16 pb-24 sm:pt-24 sm:pb-32 md:pt-32 md:pb-48">
+      <div className="px-4 py-6">
+        <div className="flex flex-col items-center text-center max-w-md mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-8 flex justify-center"
+            className="mb-6 flex justify-center"
           >
             <HeroBadge />
           </motion.div>
@@ -25,46 +25,38 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-display text-4xl font-semibold tracking-tight text-balance text-slate-900 sm:text-6xl md:text-7xl"
+            className="font-display text-[48px] font-medium leading-[48px] tracking-[-0.5px] text-black"
           >
-            Stop flying blind with your automations.
+            Stop flying blind.<br />Start monitoring.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-8 max-w-2xl text-lg font-medium text-slate-600 sm:text-xl/8"
+            className="mt-8 max-w-md text-base leading-6 text-black"
           >
-            The Missing Observability Layer for n8n. Self-hosted monitoring, visual
-            debugging, and reliability checks for your critical automations.
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.25 }}
-            className="mt-4 max-w-2xl text-base text-slate-600"
-          >
-            Join the waitlist for our Early Access program starting Q2 2026.{' '}
-            <br className="hidden sm:inline" />
-            Be the first to shape the future of n8n observability.
+            Elova brings enterprise-grade observability to n8n. Correlate workflow performance with server health and endpoint uptime in one unified, visual interface.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-12 w-full"
+            className="mt-8 w-full max-w-md"
           >
             <WaitlistForm />
           </motion.div>
-          <div className="mt-16 flow-root sm:mt-24">
-            <Screenshot
-              width={6999}
-              height={3866}
-              src="/screenshots/dashboard-screenshot.png"
-            />
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="mt-16 w-full max-w-md"
+          >
+            <div className="rounded-2xl border border-[#f1f5f9] p-2">
+              <div className="h-[250px] w-full rounded-xl bg-[#f8fafc] shadow-md" />
+            </div>
+          </motion.div>
         </div>
-      </Container>
+      </div>
     </div>
   )
 }
