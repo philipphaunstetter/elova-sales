@@ -45,13 +45,16 @@ export function Hero() {
           >
             <WaitlistForm />
           </motion.div>
-          <div className="mt-16 flow-root sm:mt-24">
-            <Screenshot
-              width={6999}
-              height={3866}
-              src="/screenshots/dashboard-screenshot.png"
-            />
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="mt-16 w-full max-w-md"
+          >
+            <div className="rounded-2xl border border-[#f1f5f9] p-2">
+              <div className="h-[250px] w-full rounded-xl bg-[#f8fafc] shadow-md" />
+            </div>
+          </motion.div>
         </div>
       </Container>
     </div>
