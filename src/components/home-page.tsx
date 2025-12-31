@@ -16,6 +16,7 @@ import { Heading, Subheading } from '@/components/text'
 import { Container } from '@/components/container'
 import { WaitlistForm } from '@/components/waitlist-form'
 import { FAQSection } from '@/components/faq-section'
+import { FinalCTA } from '@/components/final-cta'
 import { motion } from 'framer-motion'
 
 function FeaturesSection() {
@@ -341,6 +342,7 @@ export function HomePage() {
           <FAQSection />
         </div>
       </main>
+      <FinalCTA />
       <Footer />
     </div>
   )
