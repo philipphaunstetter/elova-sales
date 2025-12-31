@@ -287,7 +287,7 @@ function PricingSection() {
                   </div>
                 </div>
                 <button
-                  className={`mt-6 w-full rounded-full px-4 py-3 text-base font-semibold transition-colors cursor-pointer ${
+                  className={`mt-6 w-full rounded-full px-4 py-3 text-base leading-6 font-semibold transition-colors cursor-pointer ${
                     tier.featured
                       ? 'bg-[#6b21a8] text-white hover:bg-[#581c87]'
                       : 'bg-white text-slate-900 border border-[#e2e8f0] hover:bg-slate-50'
