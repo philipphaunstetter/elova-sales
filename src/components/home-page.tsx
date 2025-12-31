@@ -106,7 +106,7 @@ function UseCasesSection() {
             </div>
             <div className="mb-2 text-sm font-semibold text-[#6b21a8]">Agencies</div>
             <h4 className="text-lg font-semibold text-slate-900">Multi-Tenant Command Center</h4>
-            <p className="mt-4 flex-auto text-sm leading-6 text-slate-600">
+            <p className="mt-4 flex-auto text-base leading-6 text-slate-600">
               Monitor health across disjointed client instances. Catch webhook failures and API rate limits before your client sends an angry email.
             </p>
           </div>
@@ -123,7 +123,7 @@ function UseCasesSection() {
             </div>
             <div className="mb-2 text-sm font-semibold text-[#6b21a8]">AI Engineers</div>
             <h4 className="text-lg font-semibold text-slate-900">AI Cost & Latency Control</h4>
-            <p className="mt-4 flex-auto text-sm leading-6 text-slate-600">
+            <p className="mt-4 flex-auto text-base leading-6 text-slate-600">
               Stop flying blind on API costs. Track token usage, execution time, and failure rates across your autonomous agents and LLM chains.
             </p>
           </div>
@@ -140,7 +140,7 @@ function UseCasesSection() {
             </div>
             <div className="mb-2 text-sm font-semibold text-[#6b21a8]">IT Operations</div>
             <h4 className="text-lg font-semibold text-slate-900">Visual Root Cause Analysis</h4>
-            <p className="mt-4 flex-auto text-sm leading-6 text-slate-600">
+            <p className="mt-4 flex-auto text-base leading-6 text-slate-600">
               When a critical sync fails at 3 AM, don&apos;t parse JSON logs. See exactly which node broke, the data payload it received, and the error output instantly.
             </p>
           </div>
