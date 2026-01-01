@@ -339,7 +339,7 @@ export function HomePage() {
         </div>
       </main>
       <FinalCTA />
-      <Footer />
+      <Footer hideCta={true} />
     </div>
   )
 }

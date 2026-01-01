@@ -32,19 +32,19 @@ export function FAQSection() {
   return (
     <Container>
       <section id="faqs" className="scroll-mt-8">
-        <div className="mx-auto max-w-4xl py-24 sm:py-32">
+        <div className="mx-auto max-w-4xl px-4 py-6">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.5 }}
-            className="text-4xl font-semibold tracking-tight text-slate-900 sm:text-5xl"
+            className="text-3xl font-medium tracking-tight text-slate-900"
           >
             Frequently asked questions
           </motion.h2>
-          <dl className="mt-16 divide-y divide-slate-200">
+          <dl className="mt-8 flex flex-col gap-1 divide-y divide-[#cbd5e1]">
             {faqs.map((faq, index) => (
-              <Disclosure key={faq.question} as="div" className="py-6 first:pt-0 last:pb-0">
+              <Disclosure key={faq.question} as="div" className="pt-4 pb-4 first:pt-0">
                 {({ open }) => (
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -72,7 +72,7 @@ export function FAQSection() {
                             className="overflow-hidden"
                           >
                             <div className="pr-12">
-                              <p className="text-sm leading-[21px] text-slate-600">{faq.answer}</p>
+                              <p className="text-base leading-6 text-slate-600">{faq.answer}</p>
                             </div>
                           </motion.div>
                         </DisclosurePanel>
